@@ -981,7 +981,7 @@ footer{background:var(--dark);color:rgba(250,247,242,.7);padding:48px 5% 22px;}
                 <strong>Cloud Name: dbri9nty7</strong> ✅<br>
                 To create an Upload Preset: Login → Settings → Upload → Add upload preset → Signing Mode: <strong>Unsigned</strong> → Name it <strong>Kreativecotton</strong> → Save
               </div>
-              <div class="afgrid">
+              <div class="afgrid">  
                 <div class="afg"><label>Cloud Name</label><input type="text" id="set-cloud" placeholder="e.g. dbri9nty7"></div>
                 <div class="afg"><label>Upload Preset (Unsigned)</label><input type="text" id="set-preset" placeholder="e.g. Kreativecotton"></div>
               </div>
@@ -1064,7 +1064,7 @@ footer{background:var(--dark);color:rgba(250,247,242,.7);padding:48px 5% 22px;}
 
 /* ══ CONFIG ══════════════════════════════════════════════ */
 const CFG = {
-  get GAS()         { return localStorage.getItem('kc_gas')      || ''; },
+  get GAS() { return localStorage.getItem('kc_gas') || 'https://script.google.com/macros/s/AKfycbx3RhUIHBW6juXZboNAAGLxb1EMi-9dKAQ4JxdWP7B-BvWtc9CJPuLl735GHvZKZdMg/exec'; },
   get CLOUD_NAME()  { return localStorage.getItem('kc_cloud')    || 'dbri9nty7'; },
   get UPLOAD_PRESET(){ return localStorage.getItem('kc_preset')  || 'Kreativecotton'; },
   get WA_NUMBER()   { return localStorage.getItem('kc_wa')       || '919821377274'; },
