@@ -4,74 +4,47 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kreative Cotton – Kids Kurtis & Salwars</title>
-  <link rel="icon" href="https://res.cloudinary.com/dbri9nty7/image/upload/v1779465553/hadvbmo55vfpxdvbxpcc.jpg">
+<link rel="icon" href="https://res.cloudinary.com/dbri9nty7/image/upload/v1779465553/hadvbmo55vfpxdvbxpcc.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <style>
 :root{
-  --cream:#FAF7F2; --warm:#FDF9F4;
-  --brown:#8B6F47; --dark:#3D2B1F;
-  --sage:#7A8C6E; --terra:#C4694F; --gold:#C9A84C;
-  --lsage:#E8EDE4; --bdr:#E2D9CE;
-  --txt:#2C1F14; --muted:#8A7265;
-  --sbg:#2C1F14; --sw:260px;
-  --radius:6px;
+  --cream:#FAF7F2;--warm:#FDF9F4;--brown:#8B6F47;--dark:#3D2B1F;
+  --sage:#7A8C6E;--terra:#C4694F;--gold:#C9A84C;
+  --lsage:#E8EDE4;--bdr:#E2D9CE;--txt:#2C1F14;--muted:#8A7265;
+  --sbg:#2C1F14;--sw:260px;--radius:6px;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--txt);overflow-x:hidden;}
-
-/* NAV */
-#pub-nav{
-  position:fixed;top:0;left:0;right:0;z-index:200;
-  background:rgba(250,247,242,.97);backdrop-filter:blur(14px);
-  border-bottom:1px solid var(--bdr);
-  display:flex;align-items:center;justify-content:space-between;
-  padding:0 5%;height:70px;
-}
+#pub-nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(250,247,242,.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--bdr);display:flex;align-items:center;justify-content:space-between;padding:0 5%;height:70px;}
 .nav-logo{display:flex;align-items:center;gap:10px;cursor:pointer;}
 .logo-img{width:56px;height:56px;object-fit:contain;border-radius:4px;}
 .ltxt{font-family:'Playfair Display',serif;font-size:20px;color:var(--dark);font-weight:700;}
 .lsub{font-size:10px;color:var(--muted);letter-spacing:2px;text-transform:uppercase;}
 .nav-links{display:flex;align-items:center;gap:26px;list-style:none;}
-.nav-links a{font-size:13px;font-weight:500;color:var(--txt);text-decoration:none;
-  text-transform:uppercase;letter-spacing:1px;transition:color .2s;position:relative;cursor:pointer;}
-.nav-links a::after{content:'';position:absolute;bottom:-3px;left:0;right:0;
-  height:1px;background:var(--terra);transform:scaleX(0);transition:transform .2s;}
+.nav-links a{font-size:13px;font-weight:500;color:var(--txt);text-decoration:none;text-transform:uppercase;letter-spacing:1px;transition:color .2s;position:relative;cursor:pointer;}
+.nav-links a::after{content:'';position:absolute;bottom:-3px;left:0;right:0;height:1px;background:var(--terra);transform:scaleX(0);transition:transform .2s;}
 .nav-links a:hover{color:var(--terra);}
 .nav-links a:hover::after{transform:scaleX(1);}
-.nav-cta{background:var(--dark)!important;color:var(--cream)!important;
-  padding:9px 18px;border-radius:2px;font-size:11px!important;}
+.nav-cta{background:var(--dark)!important;color:var(--cream)!important;padding:9px 18px;border-radius:2px;font-size:11px!important;}
 .nav-cta:hover{background:var(--terra)!important;}
 .nav-cta::after{display:none!important;}
-.nav-admin-btn{background:transparent;border:1px solid var(--bdr);color:var(--muted);
-  padding:7px 13px;border-radius:2px;font-family:'Jost',sans-serif;
-  font-size:11px;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;
-  transition:all .2s;display:flex;align-items:center;gap:6px;}
+.nav-admin-btn{background:transparent;border:1px solid var(--bdr);color:var(--muted);padding:7px 13px;border-radius:2px;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:6px;}
 .nav-admin-btn:hover{border-color:var(--dark);color:var(--dark);}
 .nav-hamburger{display:none;background:none;border:none;cursor:pointer;padding:4px;}
-.mob-menu{display:none;position:fixed;top:70px;left:0;right:0;
-  background:var(--warm);border-bottom:1px solid var(--bdr);
-  padding:16px 5%;z-index:199;flex-direction:column;gap:0;}
+.mob-menu{display:none;position:fixed;top:70px;left:0;right:0;background:var(--warm);border-bottom:1px solid var(--bdr);padding:16px 5%;z-index:199;flex-direction:column;gap:0;}
 .mob-menu.open{display:flex;}
-.mob-menu a{padding:13px 0;border-bottom:1px solid var(--bdr);font-size:14px;
-  color:var(--txt);text-decoration:none;text-transform:uppercase;letter-spacing:1px;cursor:pointer;}
+.mob-menu a{padding:13px 0;border-bottom:1px solid var(--bdr);font-size:14px;color:var(--txt);text-decoration:none;text-transform:uppercase;letter-spacing:1px;cursor:pointer;}
 .mob-menu a:last-child{border-bottom:none;}
-
-/* PAGES */
 .page{display:none;min-height:100vh;padding-top:70px;}
 .page.active{display:block;}
-
-/* HERO */
 .hero{height:calc(100vh - 70px);display:grid;grid-template-columns:1fr 1fr;overflow:hidden;}
-.hero-l{padding:7% 6% 5% 7%;display:flex;flex-direction:column;justify-content:center;
-  background:var(--warm);position:relative;}
+.hero-l{padding:7% 6% 5% 7%;display:flex;flex-direction:column;justify-content:center;background:var(--warm);position:relative;}
 .hero-l::before{content:'';position:absolute;top:0;right:0;bottom:0;width:1px;background:var(--bdr);}
-.htag{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:3px;
-  text-transform:uppercase;color:var(--terra);font-weight:600;margin-bottom:20px;}
+.htag{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--terra);font-weight:600;margin-bottom:20px;}
 .htag::before{content:'';width:28px;height:1px;background:var(--terra);}
-.hh1{font-family:'Playfair Display',serif;font-size:clamp(30px,4vw,54px);
-  line-height:1.1;color:var(--dark);margin-bottom:20px;}
+.hh1{font-family:'Playfair Display',serif;font-size:clamp(30px,4vw,54px);line-height:1.1;color:var(--dark);margin-bottom:20px;}
 .hh1 em{color:var(--terra);font-style:italic;}
 .hdesc{font-size:15px;color:var(--muted);line-height:1.8;max-width:420px;margin-bottom:32px;font-weight:300;}
 .hbtns{display:flex;gap:12px;align-items:center;flex-wrap:wrap;}
@@ -81,72 +54,41 @@ body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--txt);over
 .hero-r{position:relative;overflow:hidden;background:#1a1a1a;}
 .hero-r video,.hero-r img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(61,43,31,.3),rgba(61,43,31,.05));}
-.hero-badge{position:absolute;bottom:22px;left:22px;
-  background:rgba(61,43,31,.78);backdrop-filter:blur(8px);
-  color:var(--cream);padding:10px 16px;border-radius:4px;
-  font-size:12px;letter-spacing:1px;text-transform:uppercase;border-left:3px solid var(--gold);}
-
-/* CAT STRIP */
+.hero-badge{position:absolute;bottom:22px;left:22px;background:rgba(61,43,31,.78);backdrop-filter:blur(8px);color:var(--cream);padding:10px 16px;border-radius:4px;font-size:12px;letter-spacing:1px;text-transform:uppercase;border-left:3px solid var(--gold);}
 .cat-strip{background:var(--dark);padding:20px 5%;display:flex;justify-content:center;gap:36px;align-items:center;flex-wrap:wrap;}
 .ci{display:flex;align-items:center;gap:8px;color:rgba(250,247,242,.68);font-size:11px;letter-spacing:2px;text-transform:uppercase;}
 .cd{width:5px;height:5px;border-radius:50%;background:var(--gold);}
-
-/* SECTIONS */
 section{padding:64px 5%;}
-.stag{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--terra);
-  font-weight:600;margin-bottom:10px;display:flex;align-items:center;gap:8px;}
+.stag{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--terra);font-weight:600;margin-bottom:10px;display:flex;align-items:center;gap:8px;}
 .stag::before{content:'';width:28px;height:1px;background:var(--terra);}
-.stitle{font-family:'Playfair Display',serif;font-size:clamp(22px,3.5vw,38px);
-  color:var(--dark);line-height:1.2;margin-bottom:36px;}
-
-/* BUTTONS */
-.btn-p{background:var(--dark);color:var(--cream);padding:12px 26px;
-  font-family:'Jost',sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;
-  border:none;cursor:pointer;border-radius:2px;transition:all .2s;text-decoration:none;display:inline-block;}
+.stitle{font-family:'Playfair Display',serif;font-size:clamp(22px,3.5vw,38px);color:var(--dark);line-height:1.2;margin-bottom:36px;}
+.btn-p{background:var(--dark);color:var(--cream);padding:12px 26px;font-family:'Jost',sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;border:none;cursor:pointer;border-radius:2px;transition:all .2s;text-decoration:none;display:inline-block;}
 .btn-p:hover{background:var(--terra);}
-.btn-o{background:transparent;color:var(--dark);padding:11px 26px;
-  font-family:'Jost',sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;
-  border:1px solid var(--dark);cursor:pointer;border-radius:2px;
-  transition:all .2s;text-decoration:none;display:inline-block;}
+.btn-o{background:transparent;color:var(--dark);padding:11px 26px;font-family:'Jost',sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;border:1px solid var(--dark);cursor:pointer;border-radius:2px;transition:all .2s;text-decoration:none;display:inline-block;}
 .btn-o:hover{background:var(--dark);color:var(--cream);}
-.btn-wa{background:#25D366;color:#fff;padding:12px 26px;
-  font-family:'Jost',sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;
-  border:none;cursor:pointer;border-radius:2px;transition:all .2s;text-decoration:none;display:inline-block;}
+.btn-wa{background:#25D366;color:#fff;padding:12px 26px;font-family:'Jost',sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;border:none;cursor:pointer;border-radius:2px;transition:all .2s;text-decoration:none;display:inline-block;}
 .btn-wa:hover{background:#1da851;}
-
-/* LOADING STATE */
 .gs-loading{text-align:center;padding:60px;color:var(--muted);grid-column:1/-1;}
-.gs-spin{width:38px;height:38px;border:3px solid var(--bdr);border-top-color:var(--brown);
-  border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 14px;}
+.gs-spin{width:38px;height:38px;border:3px solid var(--bdr);border-top-color:var(--brown);border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 14px;}
 .gs-status{font-size:14px;color:var(--muted);}
-
-/* PRODUCT GRID */
 .pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:20px;}
-.pcard{background:var(--warm);border:1px solid var(--bdr);border-radius:var(--radius);
-  overflow:hidden;transition:all .3s;cursor:pointer;}
+.pcard{background:var(--warm);border:1px solid var(--bdr);border-radius:var(--radius);overflow:hidden;transition:all .3s;cursor:pointer;}
 .pcard:hover{transform:translateY(-5px);box-shadow:0 20px 40px rgba(61,43,31,.12);}
-.pimg{aspect-ratio:3/4;overflow:hidden;position:relative;background:linear-gradient(135deg,#EDE3D8,#D6C9B8);}
-.pimg img{width:100%;height:100%;object-fit:cover;transition:transform .4s;}
+.pimg{aspect-ratio:3/4;overflow:hidden;position:relative;background:linear-gradient(135deg,#EDE3D8,#D6C9B8);user-select:none;-webkit-user-select:none;}
+.pimg img{width:100%;height:100%;object-fit:cover;transition:transform .4s;pointer-events:none;-webkit-user-drag:none;user-drag:none;}
 .pcard:hover .pimg img{transform:scale(1.05);}
-.pimg video{width:100%;height:100%;object-fit:cover;}
-.pbadge{position:absolute;top:10px;left:10px;background:var(--terra);color:#fff;
-  font-size:10px;letter-spacing:1.5px;text-transform:uppercase;padding:3px 9px;border-radius:2px;}
-.pplay{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
-  width:44px;height:44px;background:rgba(255,255,255,.85);border-radius:50%;
-  display:flex;align-items:center;justify-content:center;pointer-events:none;}
+.pimg video{width:100%;height:100%;object-fit:cover;pointer-events:none;}
+.pbadge{position:absolute;top:10px;left:10px;background:var(--terra);color:#fff;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;padding:3px 9px;border-radius:2px;}
+.pplay{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:44px;height:44px;background:rgba(255,255,255,.85);border-radius:50%;display:flex;align-items:center;justify-content:center;pointer-events:none;}
 .pinfo{padding:14px;}
 .pname{font-family:'Playfair Display',serif;font-size:15px;color:var(--dark);margin-bottom:3px;}
-.pcode{font-size:11px;color:var(--muted);letter-spacing:1px;margin-bottom:7px;}
 .pmeta{display:flex;justify-content:space-between;align-items:center;}
 .pprice{font-size:13px;color:var(--brown);font-weight:600;}
 .psizes{font-size:11px;color:var(--muted);}
-.iph{width:100%;height:100%;display:flex;align-items:center;justify-content:center;
-  flex-direction:column;gap:8px;color:var(--muted);}
+.iph{width:100%;height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;color:var(--muted);}
 .iph .iph-i{font-size:36px;}
 .empty{text-align:center;padding:60px;color:var(--muted);grid-column:1/-1;}
 .empty .ei{font-size:48px;margin-bottom:12px;}
-
-/* SIZE CHART */
 .size-sec{background:var(--lsage);}
 .stw{overflow-x:auto;}
 .stable{width:100%;border-collapse:collapse;font-size:14px;}
@@ -154,56 +96,40 @@ section{padding:64px 5%;}
 .stable td{padding:11px 16px;border-bottom:1px solid var(--bdr);white-space:nowrap;}
 .stable tr:nth-child(even) td{background:rgba(250,247,242,.5);}
 .stable tr:hover td{background:rgba(201,168,76,.08);}
-
-/* PRICE GRID */
 .prgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:13px;margin-top:24px;}
-.prcard{background:var(--warm);border:1px solid var(--bdr);border-radius:4px;
-  padding:20px 16px;text-align:center;transition:all .2s;}
+.prcard{background:var(--warm);border:1px solid var(--bdr);border-radius:4px;padding:20px 16px;text-align:center;transition:all .2s;}
 .prcard:hover{border-color:var(--gold);box-shadow:0 8px 24px rgba(201,168,76,.12);}
 .prfab{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:7px;}
 .prval{font-family:'Playfair Display',serif;font-size:20px;color:var(--dark);margin-bottom:3px;}
 .prunit{font-size:11px;color:var(--muted);}
-
-/* ABOUT */
 .agrid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
 .aimg{aspect-ratio:4/5;border-radius:var(--radius);overflow:hidden;}
-.aimg img,.aimg video{width:100%;height:100%;object-fit:cover;}
-.aiph{width:100%;height:100%;background:linear-gradient(135deg,#D4C5B0,#9E8B6F);
-  display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;}
+.aiph{width:100%;height:100%;background:linear-gradient(135deg,#D4C5B0,#9E8B6F);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;}
 .ap{font-size:15px;line-height:1.9;color:var(--muted);font-weight:300;margin-bottom:15px;}
 .afeat{display:flex;flex-direction:column;gap:12px;margin-top:24px;}
 .afi{display:flex;align-items:flex-start;gap:11px;}
 .fdot{width:7px;height:7px;border-radius:50%;background:var(--terra);flex-shrink:0;margin-top:6px;}
 .ftxt{font-size:14px;color:var(--txt);line-height:1.6;}
-
-/* ENQUIRY */
 .egrid{display:grid;grid-template-columns:1fr 1.6fr;gap:48px;}
 .ci-item{margin-bottom:20px;}
 .ci-lbl{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--terra);margin-bottom:4px;}
 .ci-val{font-size:15px;color:var(--dark);font-weight:500;}
 .ci-val a{color:var(--dark);text-decoration:none;}
 .ci-val a:hover{color:var(--terra);}
-.wa-enq-btn{display:inline-flex;align-items:center;gap:8px;margin-top:16px;
-  background:#25D366;color:#fff;padding:11px 20px;border-radius:4px;
-  text-decoration:none;font-size:13px;font-weight:500;transition:all .2s;}
+.wa-enq-btn{display:inline-flex;align-items:center;gap:8px;margin-top:16px;background:#25D366;color:#fff;padding:11px 20px;border-radius:4px;text-decoration:none;font-size:13px;font-weight:500;transition:all .2s;}
 .wa-enq-btn:hover{background:#1da851;}
 .eform{background:var(--warm);border:1px solid var(--bdr);border-radius:var(--radius);padding:30px;}
 .eform h3{font-family:'Playfair Display',serif;font-size:19px;color:var(--dark);margin-bottom:18px;}
 .frow{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-bottom:13px;}
 .fg{display:flex;flex-direction:column;gap:5px;margin-bottom:13px;}
 .fg label{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);font-weight:500;}
-.fg input,.fg select,.fg textarea{padding:10px 12px;border:1px solid var(--bdr);border-radius:2px;
-  background:var(--cream);font-family:'Jost',sans-serif;font-size:14px;color:var(--txt);outline:none;transition:border-color .2s;}
+.fg input,.fg select,.fg textarea{padding:10px 12px;border:1px solid var(--bdr);border-radius:2px;background:var(--cream);font-family:'Jost',sans-serif;font-size:14px;color:var(--txt);outline:none;transition:border-color .2s;}
 .fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--brown);}
 .fg textarea{min-height:85px;resize:vertical;}
 .enq-btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:4px;}
 .enq-btns button,.enq-btns a{flex:1;min-width:120px;text-align:center;padding:12px 10px;}
-.fsuc{display:none;background:#E8F5E9;border:1px solid #A5D6A7;border-radius:2px;
-  padding:12px 14px;font-size:14px;color:#2E7D32;margin-top:12px;}
-.ferr{display:none;background:#FFEBEE;border:1px solid #FFCDD2;border-radius:2px;
-  padding:12px 14px;font-size:14px;color:#C62828;margin-top:12px;}
-
-/* FOOTER */
+.fsuc{display:none;background:#E8F5E9;border:1px solid #A5D6A7;border-radius:2px;padding:12px 14px;font-size:14px;color:#2E7D32;margin-top:12px;}
+.ferr{display:none;background:#FFEBEE;border:1px solid #FFCDD2;border-radius:2px;padding:12px 14px;font-size:14px;color:#C62828;margin-top:12px;}
 footer{background:var(--dark);color:rgba(250,247,242,.7);padding:48px 5% 22px;}
 .fgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:36px;margin-bottom:36px;}
 .fltxt{color:var(--cream);font-family:'Playfair Display',serif;font-size:20px;}
@@ -214,198 +140,125 @@ footer{background:var(--dark);color:rgba(250,247,242,.7);padding:48px 5% 22px;}
 .fcol ul li a{font-size:13px;color:rgba(250,247,242,.56);text-decoration:none;transition:color .2s;cursor:pointer;}
 .fcol ul li a:hover{color:var(--cream);}
 .fbot{border-top:1px solid rgba(255,255,255,.08);padding-top:18px;text-align:center;font-size:12px;color:rgba(250,247,242,.28);}
-
-/* WA FLOAT */
-.waf{position:fixed;bottom:26px;right:26px;z-index:300;
-  width:52px;height:52px;border-radius:50%;background:#25D366;
-  display:flex;align-items:center;justify-content:center;
-  box-shadow:0 4px 20px rgba(37,211,102,.4);text-decoration:none;transition:transform .2s;}
+.waf{position:fixed;bottom:26px;right:26px;z-index:300;width:52px;height:52px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4);text-decoration:none;transition:transform .2s;}
 .waf:hover{transform:scale(1.1);}
-
-/* PRODUCT MODAL */
-.moverlay{display:none;position:fixed;inset:0;z-index:400;
-  background:rgba(0,0,0,.7);backdrop-filter:blur(4px);align-items:center;justify-content:center;}
+.moverlay{display:none;position:fixed;inset:0;z-index:400;background:rgba(0,0,0,.7);backdrop-filter:blur(4px);align-items:center;justify-content:center;}
 .moverlay.open{display:flex;}
-.modal{background:var(--warm);border-radius:var(--radius);width:94%;max-width:860px;
-  max-height:92vh;overflow-y:auto;display:grid;grid-template-columns:1fr 1fr;position:relative;}
-.modal-media{aspect-ratio:3/4;overflow:hidden;background:#EDE3D8;}
-.modal-media img,.modal-media video{width:100%;height:100%;object-fit:cover;}
+.modal{background:var(--warm);border-radius:var(--radius);width:94%;max-width:860px;max-height:92vh;overflow-y:auto;display:grid;grid-template-columns:1fr 1fr;position:relative;}
+.modal-media{aspect-ratio:3/4;overflow:hidden;background:#EDE3D8;user-select:none;-webkit-user-select:none;}
+.modal-media img,.modal-media video{width:100%;height:100%;object-fit:cover;pointer-events:none;-webkit-user-drag:none;}
 .modal-info{padding:32px 28px;display:flex;flex-direction:column;}
-.mclose{position:absolute;top:14px;right:14px;background:rgba(255,255,255,.9);
-  border:none;cursor:pointer;font-size:18px;color:var(--muted);
-  width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;}
+.mclose{position:absolute;top:14px;right:14px;background:rgba(255,255,255,.9);border:none;cursor:pointer;font-size:18px;color:var(--muted);width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;}
 .mtitle{font-family:'Playfair Display',serif;font-size:22px;color:var(--dark);margin-bottom:4px;}
-.mcode{font-size:12px;color:var(--muted);letter-spacing:1px;margin-bottom:14px;}
 .mdetail{font-size:14px;color:var(--muted);margin-bottom:5px;display:flex;gap:6px;}
 .mdetail strong{color:var(--dark);min-width:70px;}
-.mbadge{display:inline-block;background:rgba(196,105,79,.1);color:var(--terra);
-  font-size:11px;letter-spacing:1px;text-transform:uppercase;padding:3px 10px;border-radius:2px;margin-bottom:16px;}
+.mbadge{display:inline-block;background:rgba(196,105,79,.1);color:var(--terra);font-size:11px;letter-spacing:1px;text-transform:uppercase;padding:3px 10px;border-radius:2px;margin-bottom:16px;}
 .mbtns{display:flex;flex-direction:column;gap:9px;margin-top:auto;padding-top:20px;}
 .mbtns .btn-p,.mbtns .btn-wa,.mbtns .btn-o{width:100%;text-align:center;}
-
-/* FILTER BAR */
-.fbar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px;}
-.fbtn{padding:7px 16px;border:1px solid var(--bdr);background:transparent;color:var(--txt);
-  font-family:'Jost',sans-serif;font-size:12px;letter-spacing:1px;cursor:pointer;border-radius:2px;transition:all .2s;}
+.fbar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;}
+.fbtn{padding:7px 16px;border:1px solid var(--bdr);background:transparent;color:var(--txt);font-family:'Jost',sans-serif;font-size:12px;letter-spacing:1px;cursor:pointer;border-radius:2px;transition:all .2s;}
 .fbtn.active{background:var(--dark);color:var(--cream);border-color:var(--dark);}
-
-/* PAGINATION */
 .pagination{display:flex;justify-content:center;gap:8px;margin-top:36px;flex-wrap:wrap;}
-.pag-btn{padding:8px 16px;border:1px solid var(--bdr);background:transparent;color:var(--txt);
-  font-family:'Jost',sans-serif;font-size:13px;cursor:pointer;border-radius:2px;transition:all .2s;}
+.pag-btn{padding:8px 16px;border:1px solid var(--bdr);background:transparent;color:var(--txt);font-family:'Jost',sans-serif;font-size:13px;cursor:pointer;border-radius:2px;transition:all .2s;}
 .pag-btn.active{background:var(--dark);color:var(--cream);border-color:var(--dark);}
 .pag-btn:hover:not(.active){background:var(--lsage);}
 .pag-info{font-size:12px;color:var(--muted);text-align:center;margin-top:10px;}
-
-/* GAS STATUS BAR */
-.gas-bar{background:var(--lsage);border-bottom:1px solid var(--bdr);
-  padding:6px 22px;font-size:12px;color:var(--muted);
-  display:flex;align-items:center;gap:8px;flex-shrink:0;}
+.gas-bar{background:var(--lsage);border-bottom:1px solid var(--bdr);padding:6px 22px;font-size:12px;color:var(--muted);display:flex;align-items:center;gap:8px;flex-shrink:0;}
 .gas-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;background:var(--bdr);}
 .gas-dot.ok{background:#4CAF50;}
 .gas-dot.err{background:var(--terra);}
 .gas-dot.checking{background:var(--gold);animation:pulse 1s infinite;}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
-
-/* ADMIN OVERLAY */
 #admin-overlay{display:none;position:fixed;inset:0;z-index:500;background:var(--cream);}
 #admin-overlay.open{display:flex;}
-
-/* LOGIN */
-#adm-login{position:absolute;inset:0;z-index:10;background:var(--dark);
-  display:flex;align-items:center;justify-content:center;}
-.lbox{background:var(--warm);border-radius:8px;padding:40px 34px;width:360px;
-  box-shadow:0 40px 80px rgba(0,0,0,.35);}
+#adm-login{position:absolute;inset:0;z-index:10;background:var(--dark);display:flex;align-items:center;justify-content:center;}
+.lbox{background:var(--warm);border-radius:8px;padding:40px 34px;width:360px;box-shadow:0 40px 80px rgba(0,0,0,.35);}
 .llogo{text-align:center;margin-bottom:24px;}
-.llm{width:48px;height:48px;border-radius:50%;background:var(--dark);color:var(--gold);
-  display:inline-flex;align-items:center;justify-content:center;
-  font-family:'Playfair Display',serif;font-size:20px;font-weight:700;margin-bottom:9px;}
+.llm{width:48px;height:48px;border-radius:50%;background:var(--dark);color:var(--gold);display:inline-flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:20px;font-weight:700;margin-bottom:9px;}
 .llogo h2{font-family:'Playfair Display',serif;color:var(--dark);font-size:19px;}
 .llogo p{font-size:11px;color:var(--muted);letter-spacing:2px;text-transform:uppercase;}
 .lf{margin-bottom:11px;}
 .lf label{display:block;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:5px;}
-.lf input{width:100%;padding:10px 12px;border:1px solid var(--bdr);border-radius:2px;
-  font-family:'Jost',sans-serif;font-size:14px;background:var(--cream);outline:none;}
-.lbtn{width:100%;padding:12px;background:var(--dark);color:var(--cream);border:none;border-radius:2px;
-  cursor:pointer;font-family:'Jost',sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;
-  margin-top:6px;transition:background .2s;}
+.lf input{width:100%;padding:10px 12px;border:1px solid var(--bdr);border-radius:2px;font-family:'Jost',sans-serif;font-size:14px;background:var(--cream);outline:none;}
+.lbtn{width:100%;padding:12px;background:var(--dark);color:var(--cream);border:none;border-radius:2px;cursor:pointer;font-family:'Jost',sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;margin-top:6px;transition:background .2s;}
 .lbtn:hover{background:var(--terra);}
 .lerr{font-size:13px;color:var(--terra);text-align:center;margin-top:9px;display:none;}
-.lhint{font-size:11px;color:var(--muted);text-align:center;margin-top:10px;}
-
-/* ADMIN LAYOUT */
 #adm-app{display:flex;width:100%;height:100vh;overflow:hidden;}
 .asb{width:var(--sw);background:var(--sbg);flex-shrink:0;display:flex;flex-direction:column;height:100vh;overflow-y:auto;}
 .asb-top{padding:18px 15px;border-bottom:1px solid rgba(255,255,255,.08);display:flex;align-items:center;gap:10px;}
-.alm{width:33px;height:33px;border-radius:50%;background:var(--gold);color:var(--dark);
-  display:flex;align-items:center;justify-content:center;
-  font-family:'Playfair Display',serif;font-size:14px;font-weight:700;flex-shrink:0;}
+.alm{width:33px;height:33px;border-radius:50%;background:var(--gold);color:var(--dark);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:14px;font-weight:700;flex-shrink:0;}
 .alt{color:var(--cream);font-family:'Playfair Display',serif;font-size:14px;}
 .als{font-size:10px;color:rgba(255,255,255,.3);letter-spacing:2px;text-transform:uppercase;}
 .anav{padding:11px 0;flex:1;}
 .asec{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.22);padding:11px 15px 4px;}
-.alnk{display:flex;align-items:center;gap:10px;padding:10px 15px;font-size:13px;cursor:pointer;
-  color:rgba(255,255,255,.54);transition:all .2s;border-left:3px solid transparent;}
+.alnk{display:flex;align-items:center;gap:10px;padding:10px 15px;font-size:13px;cursor:pointer;color:rgba(255,255,255,.54);transition:all .2s;border-left:3px solid transparent;}
 .alnk:hover{color:var(--cream);background:rgba(255,255,255,.05);}
 .alnk.active{color:var(--cream);border-left-color:var(--gold);background:rgba(201,168,76,.08);}
 .alnk svg{opacity:.6;flex-shrink:0;}
 .afooter{padding:12px 15px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:6px;}
-.aback,.aout{width:100%;padding:8px;border-radius:2px;cursor:pointer;
-  font-family:'Jost',sans-serif;font-size:11px;letter-spacing:1px;text-transform:uppercase;transition:all .2s;border:none;}
+.aback,.aout{width:100%;padding:8px;border-radius:2px;cursor:pointer;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:1px;text-transform:uppercase;transition:all .2s;border:none;}
 .aback{background:rgba(201,168,76,.15);color:var(--gold);}
 .aback:hover{background:var(--gold);color:var(--dark);}
 .aout{background:rgba(196,105,79,.15);color:var(--terra);}
 .aout:hover{background:var(--terra);color:#fff;}
-
-/* ADMIN MAIN */
 .amain{flex:1;display:flex;flex-direction:column;overflow:hidden;}
-.atopbar{background:var(--warm);border-bottom:1px solid var(--bdr);
-  padding:13px 22px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;}
+.atopbar{background:var(--warm);border-bottom:1px solid var(--bdr);padding:13px 22px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;}
 .atb-t{font-family:'Playfair Display',serif;font-size:18px;color:var(--dark);}
 .atb-s{font-size:12px;color:var(--muted);margin-top:2px;}
 .aclock{font-size:12px;color:var(--muted);}
 .acontent{flex:1;overflow-y:auto;padding:22px;}
-
-/* PANELS */
 .apanel{display:none;}
 .apanel.active{display:block;}
-
-/* STATS */
 .astats{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-bottom:20px;}
 .astat{background:var(--warm);border:1px solid var(--bdr);border-radius:4px;padding:18px;}
 .astat .n{font-family:'Playfair Display',serif;font-size:26px;color:var(--dark);}
 .astat .l{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-top:3px;}
-
-/* CARD */
 .acard{background:var(--warm);border:1px solid var(--bdr);border-radius:4px;padding:20px;margin-bottom:16px;}
-.acard-t{font-family:'Playfair Display',serif;font-size:16px;color:var(--dark);
-  margin-bottom:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;}
-
-/* FORM */
+.acard-t{font-family:'Playfair Display',serif;font-size:16px;color:var(--dark);margin-bottom:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;}
 .afgrid{display:grid;grid-template-columns:1fr 1fr;gap:13px;}
 .afg{display:flex;flex-direction:column;gap:4px;margin-bottom:13px;}
 .afg.full{grid-column:1/-1;}
 .afg label{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);font-weight:500;}
-.afg input,.afg select,.afg textarea{padding:9px 12px;border:1px solid var(--bdr);border-radius:2px;
-  background:var(--cream);font-family:'Jost',sans-serif;font-size:14px;color:var(--txt);outline:none;
-  transition:border-color .2s;width:100%;}
+.afg input,.afg select,.afg textarea{padding:9px 12px;border:1px solid var(--bdr);border-radius:2px;background:var(--cream);font-family:'Jost',sans-serif;font-size:14px;color:var(--txt);outline:none;transition:border-color .2s;width:100%;}
 .afg input:focus,.afg select:focus,.afg textarea:focus{border-color:var(--brown);}
 .afg textarea{min-height:65px;resize:vertical;}
-
-/* CLOUDINARY UPLOAD ZONE */
-.uzone{border:2px dashed var(--bdr);border-radius:var(--radius);
-  padding:28px 16px;text-align:center;cursor:pointer;
-  background:var(--cream);transition:all .25s;position:relative;overflow:hidden;}
-.uzone:hover,.uzone.dragover{border-color:var(--brown);background:#FAF3EB;
-  box-shadow:0 0 0 4px rgba(139,111,71,.08);}
+.uzone{border:2px dashed var(--bdr);border-radius:var(--radius);padding:28px 16px;text-align:center;cursor:pointer;background:var(--cream);transition:all .25s;position:relative;overflow:hidden;}
+.uzone:hover,.uzone.dragover{border-color:var(--brown);background:#FAF3EB;box-shadow:0 0 0 4px rgba(139,111,71,.08);}
 .uzone input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%;}
 .uz-icon{font-size:32px;margin-bottom:8px;}
 .uz-title{font-size:14px;color:var(--dark);font-weight:600;margin-bottom:3px;}
 .uz-sub{font-size:12px;color:var(--muted);}
-.uz-hint{display:inline-block;margin-top:10px;padding:4px 10px;
-  background:rgba(201,168,76,.1);border-radius:2px;font-size:11px;color:var(--brown);letter-spacing:.5px;}
+.uz-hint{display:inline-block;margin-top:10px;padding:4px 10px;background:rgba(201,168,76,.1);border-radius:2px;font-size:11px;color:var(--brown);letter-spacing:.5px;}
 .ustate{display:none;align-items:center;gap:10px;margin-top:10px;padding:10px 14px;border-radius:4px;font-size:13px;}
 .ustate.show{display:flex;}
 .ustate.uploading{background:var(--lsage);color:var(--sage);}
 .ustate.done{background:#E8F5E9;color:#2E7D32;}
 .ustate.error{background:#FFEBEE;color:#C62828;}
-.uspin{width:14px;height:14px;border:2px solid rgba(0,0,0,.1);border-top-color:currentColor;
-  border-radius:50%;animation:spin .7s linear infinite;flex-shrink:0;}
+.uspin{width:14px;height:14px;border:2px solid rgba(0,0,0,.1);border-top-color:currentColor;border-radius:50%;animation:spin .7s linear infinite;flex-shrink:0;}
 .upbar-wrap{display:none;margin-top:8px;height:6px;background:var(--bdr);border-radius:3px;overflow:hidden;}
 .upbar-wrap.show{display:block;}
 .upbar{height:100%;background:var(--sage);border-radius:3px;transition:width .2s;width:0%;}
-.iprev{display:none;margin-top:12px;background:var(--warm);border:1px solid var(--bdr);
-  border-radius:var(--radius);padding:12px;flex-direction:column;gap:10px;}
+.iprev{display:none;margin-top:12px;background:var(--warm);border:1px solid var(--bdr);border-radius:var(--radius);padding:12px;flex-direction:column;gap:10px;}
 .iprev.show{display:flex;}
 .iprev-top{display:flex;gap:12px;align-items:flex-start;}
 .ipthumb{width:72px;height:90px;object-fit:cover;border-radius:4px;border:1px solid var(--bdr);flex-shrink:0;}
 .ipvthumb{width:72px;height:90px;object-fit:cover;border-radius:4px;border:1px solid var(--bdr);flex-shrink:0;}
 .ipinfo{flex:1;min-width:0;}
-.ipname{font-size:13px;color:var(--dark);font-weight:600;margin-bottom:3px;
-  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.ipname{font-size:13px;color:var(--dark);font-weight:600;margin-bottom:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 .ipsize{font-size:12px;color:var(--muted);margin-bottom:2px;}
-.iprem{background:none;border:1px solid var(--bdr);border-radius:2px;cursor:pointer;
-  padding:4px 10px;font-size:11px;color:var(--muted);transition:all .2s;font-family:'Jost',sans-serif;display:inline-block;}
+.iprem{background:none;border:1px solid var(--bdr);border-radius:2px;cursor:pointer;padding:4px 10px;font-size:11px;color:var(--muted);transition:all .2s;font-family:'Jost',sans-serif;display:inline-block;}
 .iprem:hover{border-color:var(--terra);color:var(--terra);}
 .ipurl-row{display:flex;align-items:center;gap:7px;}
-.ipurl-inp{flex:1;padding:6px 9px;border:1px solid var(--bdr);border-radius:2px;
-  font-family:'Jost',sans-serif;font-size:11px;color:var(--muted);background:var(--cream);outline:none;}
-.ipurl-copy{padding:6px 11px;border:1px solid var(--bdr);border-radius:2px;
-  background:transparent;cursor:pointer;font-size:11px;font-family:'Jost',sans-serif;
-  color:var(--muted);transition:all .2s;white-space:nowrap;}
+.ipurl-inp{flex:1;padding:6px 9px;border:1px solid var(--bdr);border-radius:2px;font-family:'Jost',sans-serif;font-size:11px;color:var(--muted);background:var(--cream);outline:none;}
+.ipurl-copy{padding:6px 11px;border:1px solid var(--bdr);border-radius:2px;background:transparent;cursor:pointer;font-size:11px;font-family:'Jost',sans-serif;color:var(--muted);transition:all .2s;white-space:nowrap;}
 .ipurl-copy:hover{border-color:var(--brown);color:var(--dark);}
-
-/* SAVE STATUS */
 .save-status{font-size:12px;margin-top:10px;padding:8px 12px;border-radius:4px;display:none;}
 .save-status.show{display:block;}
 .save-status.saving{background:var(--lsage);color:var(--sage);}
 .save-status.saved{background:#E8F5E9;color:#2E7D32;}
 .save-status.local{background:#FFF3CD;color:#856404;}
 .save-status.error{background:#FFEBEE;color:#C62828;}
-
-/* BTNS */
-.abtn{padding:10px 20px;border:none;border-radius:2px;cursor:pointer;
-  font-family:'Jost',sans-serif;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;transition:all .2s;}
+.abtn{padding:10px 20px;border:none;border-radius:2px;cursor:pointer;font-family:'Jost',sans-serif;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;transition:all .2s;}
 .ab-d{background:var(--dark);color:var(--cream);}
 .ab-d:hover{background:var(--terra);}
 .ab-o{background:transparent;color:var(--dark);border:1px solid var(--dark);}
@@ -413,66 +266,53 @@ footer{background:var(--dark);color:rgba(250,247,242,.7);padding:48px 5% 22px;}
 .ab-sm{padding:5px 11px;font-size:11px;}
 .ab-del{background:transparent;color:var(--terra);border:1px solid var(--terra);padding:5px 11px;font-size:11px;}
 .ab-del:hover{background:var(--terra);color:#fff;}
-
-/* ADMIN TABLE */
+.ab-toggle-on{background:transparent;color:#2E7D32;border:1px solid #2E7D32;padding:5px 11px;font-size:11px;}
+.ab-toggle-on:hover{background:#2E7D32;color:#fff;}
+.ab-toggle-off{background:transparent;color:var(--muted);border:1px solid var(--bdr);padding:5px 11px;font-size:11px;}
+.ab-toggle-off:hover{background:var(--lsage);}
 .atw{overflow-x:auto;}
 .atable{width:100%;border-collapse:collapse;font-size:13px;}
 .atable th{background:var(--dark);color:var(--cream);padding:10px 12px;text-align:left;font-weight:500;white-space:nowrap;}
 .atable td{padding:10px 12px;border-bottom:1px solid var(--bdr);vertical-align:middle;}
 .atable tr:hover td{background:rgba(201,168,76,.04);}
-.athumb{width:40px;height:52px;object-fit:cover;border-radius:3px;}
-.ano-img{width:40px;height:52px;background:var(--lsage);border-radius:3px;
-  display:flex;align-items:center;justify-content:center;font-size:16px;}
+.athumb{width:40px;height:52px;object-fit:cover;border-radius:3px;pointer-events:none;-webkit-user-drag:none;}
+.ano-img{width:40px;height:52px;background:var(--lsage);border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:16px;}
 .tdacts{display:flex;gap:5px;align-items:center;flex-wrap:wrap;}
-.badge-live{background:rgba(122,140,110,.15);color:var(--sage);font-size:10px;letter-spacing:1px;
-  text-transform:uppercase;padding:2px 8px;border-radius:2px;}
-.badge-vid{background:rgba(61,43,31,.1);color:var(--dark);font-size:10px;letter-spacing:1px;
-  text-transform:uppercase;padding:2px 8px;border-radius:2px;}
-
-/* TOAST */
-#toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(80px);
-  z-index:9999;background:var(--dark);color:var(--cream);
-  padding:10px 20px;border-radius:4px;font-size:13px;
-  transition:transform .3s;pointer-events:none;white-space:nowrap;}
+.badge-live{background:rgba(122,140,110,.15);color:var(--sage);font-size:10px;letter-spacing:1px;text-transform:uppercase;padding:2px 8px;border-radius:2px;}
+.badge-vid{background:rgba(61,43,31,.1);color:var(--dark);font-size:10px;letter-spacing:1px;text-transform:uppercase;padding:2px 8px;border-radius:2px;}
+.badge-active{background:rgba(46,125,50,.12);color:#2E7D32;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:3px 9px;border-radius:2px;}
+.badge-inactive{background:rgba(196,105,79,.12);color:var(--terra);font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:3px 9px;border-radius:2px;}
+#toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(80px);z-index:9999;background:var(--dark);color:var(--cream);padding:10px 20px;border-radius:4px;font-size:13px;transition:transform .3s;pointer-events:none;white-space:nowrap;}
 #toast.show{transform:translateX(-50%) translateY(0);}
-
-/* SETTINGS */
 .ssec{margin-bottom:22px;}
 .ssec h3{font-family:'Playfair Display',serif;font-size:16px;color:var(--dark);margin-bottom:12px;}
 .info-box{background:var(--lsage);border-radius:4px;padding:15px 17px;font-size:13px;color:var(--muted);line-height:1.9;}
 .info-box a{color:var(--terra);}
 .warn-box{background:#FFF3CD;border:1px solid #FFC107;border-radius:4px;padding:11px 14px;font-size:13px;color:#856404;margin-bottom:14px;}
-
-/* ANIMATIONS */
+/* NO right-click / save globally on product images */
+.pimg,.modal-media{-webkit-touch-callout:none;-webkit-user-select:none;user-select:none;}
 @keyframes spin{to{transform:rotate(360deg)}}
 @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
-
-/* RESPONSIVE */
 @media(max-width:960px){
-  .hero{grid-template-columns:1fr;} .hero-r{display:none;}
+  .hero{grid-template-columns:1fr;}.hero-r{display:none;}
   .agrid,.egrid{grid-template-columns:1fr;}
   .fgrid{grid-template-columns:1fr 1fr;}
   .frow,.afgrid{grid-template-columns:1fr;}
-  .modal{grid-template-columns:1fr;} .modal-media{aspect-ratio:16/9;}
+  .modal{grid-template-columns:1fr;}.modal-media{aspect-ratio:16/9;}
   .astats{grid-template-columns:1fr 1fr;}
-  .asb{width:52px;} .alt,.als,.asec,.alnk span{display:none;}
-  #pub-nav .nav-links{display:none;} .nav-hamburger{display:block;}
+  .asb{width:52px;}.alt,.als,.asec,.alnk span{display:none;}
+  #pub-nav .nav-links{display:none;}.nav-hamburger{display:block;}
 }
 @media(max-width:600px){
-  .fgrid{grid-template-columns:1fr;} .hstats{gap:18px;}
+  .fgrid{grid-template-columns:1fr;}.hstats{gap:18px;}
   .enq-btns button,.enq-btns a{flex:none;width:100%;}
 }
 </style>
 </head>
 <body>
-
-<!-- ═══════════════════════════════
-     PUBLIC WEBSITE
-═══════════════════════════════ -->
 <nav id="pub-nav">
   <div class="nav-logo" onclick="showPage('home')">
-    <img src="https://res.cloudinary.com/dbri9nty7/image/upload/v1779348697/LogoImage_thsfid.jpg"
-         alt="Kreative Cotton Logo" class="logo-img">
+    <img src="https://res.cloudinary.com/dbri9nty7/image/upload/v1779348697/LogoImage_thsfid.jpg" alt="Kreative Cotton Logo" class="logo-img">
     <div><div class="ltxt">Kreative Cotton</div><div class="lsub">Kids Wear</div></div>
   </div>
   <ul class="nav-links">
@@ -487,13 +327,10 @@ footer{background:var(--dark);color:rgba(250,247,242,.7);padding:48px 5% 22px;}
       <span>Admin</span>
     </button>
     <button class="nav-hamburger" onclick="toggleMob()">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
-      </svg>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
     </button>
   </div>
 </nav>
-
 <div class="mob-menu" id="mob-menu">
   <a onclick="showPage('home');closeMob()">Home</a>
   <a onclick="showPage('stock');closeMob()">Ready Stock</a>
@@ -501,7 +338,6 @@ footer{background:var(--dark);color:rgba(250,247,242,.7);padding:48px 5% 22px;}
   <a onclick="showPage('enquiry');closeMob()">Enquire Now</a>
   <a onclick="openAdmin();closeMob()">Admin Panel</a>
 </div>
-
 <!-- HOME -->
 <div class="page active" id="page-home">
   <section class="hero" style="padding:0">
@@ -509,9 +345,7 @@ footer{background:var(--dark);color:rgba(250,247,242,.7);padding:48px 5% 22px;}
       <div class="htag">Pure Cotton Kids Wear</div>
       <h1 class="hh1">Little Ones Deserve<br>the <em>Best Cotton</em></h1>
       <p class="hdesc">Handcrafted kurtis &amp; salwar sets for girls aged 1–15 years. Soft, breathable, and beautifully designed — made from the finest cotton fabrics.</p>
-      <div class="hbtns">
-        <button class="btn-p" onclick="showPage('stock')">Shop Ready Stock</button>
-      </div>
+      <div class="hbtns"><button class="btn-p" onclick="showPage('stock')">Shop Ready Stock</button></div>
       <div class="hstats">
         <div><div class="snum">500+</div><div class="slbl">Designs</div></div>
         <div><div class="snum">1–15 Yrs</div><div class="slbl">Size Range</div></div>
@@ -519,13 +353,11 @@ footer{background:var(--dark);color:rgba(250,247,242,.7);padding:48px 5% 22px;}
       </div>
     </div>
     <div class="hero-r" id="hero-r">
-      <video src="https://res.cloudinary.com/dbri9nty7/video/upload/v1779350567/WhatsApp_Video_2026-05-17_at_1.01.43_PM_ftsm8d.mp4"
-             autoplay muted loop playsinline></video>
+      <video src="https://res.cloudinary.com/dbri9nty7/video/upload/v1779350567/WhatsApp_Video_2026-05-17_at_1.01.43_PM_ftsm8d.mp4" autoplay muted loop playsinline></video>
       <div class="hero-overlay"></div>
       <div class="hero-badge">Now Available</div>
     </div>
   </section>
-
   <div class="cat-strip">
     <div class="ci"><div class="cd"></div>Salwar Sets</div>
     <div class="ci"><div class="cd"></div>Lehnga Choli</div>
@@ -533,18 +365,12 @@ footer{background:var(--dark);color:rgba(250,247,242,.7);padding:48px 5% 22px;}
     <div class="ci"><div class="cd"></div>Half Chord Set</div>
     <div class="ci"><div class="cd"></div>Frock</div>
   </div>
-
   <section>
     <div class="stag">Just Landed</div>
     <h2 class="stitle">Ready Stock</h2>
-    <div class="pgrid" id="home-grid">
-      <div class="gs-loading"><div class="gs-spin"></div><div class="gs-status">Loading from Google Sheets…</div></div>
-    </div>
-    <div style="text-align:center;margin-top:28px">
-      <button class="btn-o" onclick="showPage('stock')">View All Ready Stock</button>
-    </div>
+    <div class="pgrid" id="home-grid"><div class="gs-loading"><div class="gs-spin"></div><div class="gs-status">Loading from Google Sheets…</div></div></div>
+    <div style="text-align:center;margin-top:28px"><button class="btn-o" onclick="showPage('stock')">View All Ready Stock</button></div>
   </section>
-
   <section class="size-sec">
     <div class="stag">Sizing Guide</div>
     <h2 class="stitle">Measurement Chart For Cotton Product</h2>
@@ -575,21 +401,20 @@ footer{background:var(--dark);color:rgba(250,247,242,.7);padding:48px 5% 22px;}
       <h2 class="stitle" style="margin-bottom:4px">Price Range</h2>
       <p style="font-size:13px;color:var(--muted);margin-bottom:4px">Per piece / per set pricing</p>
       <div class="prgrid">
-        <div class="prcard"><div class="prfab">Lehnga Choli (10*16)</div><div class="prval">₹695</div><div class="prunit">per piece</div></div>
-        <div class="prcard"><div class="prfab">Lehnga Choli (18*28)</div><div class="prval">₹995</div><div class="prunit">per set</div></div>
-        <div class="prcard"><div class="prfab">Salwar Suit (10*16)</div><div class="prval">₹695</div><div class="prunit">per piece</div></div>
-        <div class="prcard"><div class="prfab">Salwar Suit (18*32)</div><div class="prval">₹995</div><div class="prunit">per set</div></div>
-        <div class="prcard"><div class="prfab">Salwar Suit (34*38)</div><div class="prval">₹1,295</div><div class="prunit">per piece</div></div>
-        <div class="prcard"><div class="prfab">Chord Sets (18*28)</div><div class="prval">₹495</div><div class="prunit">per set</div></div>
-        <div class="prcard"><div class="prfab">Chord Sets (30-36)</div><div class="prval">₹595</div><div class="prunit">per piece</div></div>
-        <div class="prcard"><div class="prfab">Half Chord Sets (16-26)</div><div class="prval">₹495</div><div class="prunit">per piece</div></div>
-        <div class="prcard"><div class="prfab">Frock (12*20)</div><div class="prval">₹395</div><div class="prunit">per piece</div></div>
+        <div class="prcard"><div class="prfab">Lehnga Choli (10*16)</div><div class="prval">&#8377;695</div><div class="prunit">per piece</div></div>
+        <div class="prcard"><div class="prfab">Lehnga Choli (18*28)</div><div class="prval">&#8377;995</div><div class="prunit">per set</div></div>
+        <div class="prcard"><div class="prfab">Salwar Suit (10*16)</div><div class="prval">&#8377;695</div><div class="prunit">per piece</div></div>
+        <div class="prcard"><div class="prfab">Salwar Suit (18*32)</div><div class="prval">&#8377;995</div><div class="prunit">per set</div></div>
+        <div class="prcard"><div class="prfab">Salwar Suit (34*38)</div><div class="prval">&#8377;1,295</div><div class="prunit">per piece</div></div>
+        <div class="prcard"><div class="prfab">Chord Sets (18*28)</div><div class="prval">&#8377;495</div><div class="prunit">per set</div></div>
+        <div class="prcard"><div class="prfab">Chord Sets (30-36)</div><div class="prval">&#8377;595</div><div class="prunit">per piece</div></div>
+        <div class="prcard"><div class="prfab">Half Chord Sets (16-26)</div><div class="prval">&#8377;495</div><div class="prunit">per piece</div></div>
+        <div class="prcard"><div class="prfab">Frock (12*20)</div><div class="prval">&#8377;395</div><div class="prunit">per piece</div></div>
       </div>
       <p style="font-size:12px;color:var(--muted);margin-top:9px">* Prices vary by design and quantity. Contact us for wholesale pricing.</p>
     </div>
   </section>
 </div>
-
 <!-- READY STOCK -->
 <div class="page" id="page-stock">
   <section>
@@ -607,44 +432,35 @@ footer{background:var(--dark);color:rgba(250,247,242,.7);padding:48px 5% 22px;}
       <button class="fbtn" onclick="filterStock('Half Chord Set (16*26)',event)">Half Chord Sets (16-26)</button>
       <button class="fbtn" onclick="filterStock('Frock (12*20)',event)">Frock (12*20)</button>
     </div>
-    <div class="pgrid" id="stk-grid">
-      <div class="gs-loading"><div class="gs-spin"></div><div class="gs-status">Loading from Google Sheets…</div></div>
-    </div>
+    <div class="pgrid" id="stk-grid"><div class="gs-loading"><div class="gs-spin"></div><div class="gs-status">Loading from Google Sheets…</div></div></div>
     <div class="pagination" id="stk-pag"></div>
     <div class="pag-info" id="stk-pag-info"></div>
   </section>
 </div>
-
 <!-- ABOUT -->
 <div class="page" id="page-about">
   <section>
     <div class="agrid">
-      <div class="aimg">
-        <div class="aiph">
-          <span style="font-size:52px">👗</span>
-          <span style="font-family:'Playfair Display',serif;font-size:16px;color:rgba(61,43,31,.45)">Our Story</span>
-        </div>
-      </div>
+      <div class="aimg"><div class="aiph"><span style="font-size:52px">&#128439;</span><span style="font-family:'Playfair Display',serif;font-size:16px;color:rgba(61,43,31,.45)">Our Story</span></div></div>
       <div>
         <div class="stag">Our Story</div>
         <h2 class="stitle" style="margin-bottom:16px">Dressed in Cotton,<br><em>Made with Love</em></h2>
         <p class="ap">Kreative Cotton is a family-run kids wear brand crafting beautiful, comfortable cotton kurtis and salwar sets for girls aged 1 to 15 years. Every piece is thoughtfully designed — soft enough for everyday wear, special enough for festive occasions.</p>
-        <p class="ap">We believe children deserve the best — pure cotton that breathes, doesn't irritate delicate skin, and holds colour beautifully wash after wash.</p>
+        <p class="ap">We believe children deserve the best — pure cotton that breathes, does not irritate delicate skin, and holds colour beautifully wash after wash.</p>
         <div class="afeat">
           <div class="afi"><div class="fdot"></div><div class="ftxt"><strong>100% Pure Cotton</strong> — Soft, breathable, skin-friendly for kids.</div></div>
-          <div class="afi"><div class="fdot"></div><div class="ftxt"><strong>Ages 1–15 Years</strong> — Full size range from toddler to pre-teen.</div></div>
+          <div class="afi"><div class="fdot"></div><div class="ftxt"><strong>Ages 1-15 Years</strong> — Full size range from toddler to pre-teen.</div></div>
           <div class="afi"><div class="fdot"></div><div class="ftxt"><strong>Festive &amp; Daily Collections</strong> — Designs for every occasion.</div></div>
           <div class="afi"><div class="fdot"></div><div class="ftxt"><strong>Bulk &amp; Retail Orders</strong> — Boutique-friendly pricing for resellers.</div></div>
         </div>
         <div style="margin-top:28px;display:flex;gap:10px;flex-wrap:wrap">
           <button class="btn-p" onclick="showPage('enquiry')">Get in Touch</button>
-          <a href="#" class="btn-wa" id="wa-about">💬 WhatsApp Us</a>
+          <a href="#" class="btn-wa" id="wa-about">&#128172; WhatsApp Us</a>
         </div>
       </div>
     </div>
   </section>
 </div>
-
 <!-- ENQUIRY -->
 <div class="page" id="page-enquiry">
   <section>
@@ -652,14 +468,10 @@ footer{background:var(--dark);color:rgba(250,247,242,.7);padding:48px 5% 22px;}
     <h2 class="stitle">Let's Talk</h2>
     <div class="egrid">
       <div>
-        <div class="ci-item"><div class="ci-lbl">Phone / WhatsApp</div>
-          <div class="ci-val"><a id="ci-phone" href="tel:+919821377274">+91 9821377274</a></div></div>
-        <div class="ci-item"><div class="ci-lbl">Email</div>
-          <div class="ci-val"><a id="ci-email" href="mailto:krazygirlmumbai@gmail.com">krazygirlmumbai@gmail.com</a></div></div>
-        <div class="ci-item"><div class="ci-lbl">Address</div>
-          <div class="ci-val">29 Grd Flr, ESSGEE OPTION,<br>Mumbai – 400028, Maharashtra</div></div>
-        <div class="ci-item"><div class="ci-lbl">Business Hours</div>
-          <div class="ci-val">Mon – Sat: 10:00 AM – 9:00 PM</div></div>
+        <div class="ci-item"><div class="ci-lbl">Phone / WhatsApp</div><div class="ci-val"><a id="ci-phone" href="tel:+919821377274">+91 9821377274</a></div></div>
+        <div class="ci-item"><div class="ci-lbl">Email</div><div class="ci-val"><a id="ci-email" href="mailto:krazygirlmumbai@gmail.com">krazygirlmumbai@gmail.com</a></div></div>
+        <div class="ci-item"><div class="ci-lbl">Address</div><div class="ci-val">29 Grd Flr, ESSGEE OPTION,<br>Mumbai - 400028, Maharashtra</div></div>
+        <div class="ci-item"><div class="ci-lbl">Business Hours</div><div class="ci-val">Mon - Sat: 10:00 AM - 9:00 PM</div></div>
         <a class="wa-enq-btn" href="#" id="wa-chat-btn" target="_blank">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           Chat on WhatsApp
@@ -682,10 +494,10 @@ footer{background:var(--dark);color:rgba(250,247,242,.7);padding:48px 5% 22px;}
           </select>
         </div>
         <div class="fg"><label>Quantity (Sets)</label><input type="number" id="eq-qty" placeholder="e.g. 2 Sets"></div>
-        <div class="fg"><label>Message</label><textarea id="eq-msg" placeholder="Tell us about your requirement — design, timeline..."></textarea></div>
+        <div class="fg"><label>Message</label><textarea id="eq-msg" placeholder="Tell us about your requirement..."></textarea></div>
         <div class="enq-btns">
-          <button class="btn-p" onclick="submitEnquiry('email')" id="enq-email-btn">📧 Send via Email</button>
-          <a class="btn-wa" href="#" onclick="submitEnquiry('wa');return false;">💬 Send via WhatsApp</a>
+          <button class="btn-p" onclick="submitEnquiry('email')" id="enq-email-btn">&#128231; Send via Email</button>
+          <a class="btn-wa" href="#" onclick="submitEnquiry('wa');return false;">&#128172; Send via WhatsApp</a>
         </div>
         <div class="fsuc" id="eq-suc"></div>
         <div class="ferr" id="eq-err"></div>
@@ -693,16 +505,14 @@ footer{background:var(--dark);color:rgba(250,247,242,.7);padding:48px 5% 22px;}
     </div>
   </section>
 </div>
-
 <footer>
   <div class="fgrid">
     <div>
       <div style="display:flex;align-items:center;gap:10px;margin-bottom:11px">
-        <img src="https://res.cloudinary.com/dbri9nty7/image/upload/v1779348697/LogoImage_thsfid.jpg"
-             alt="" style="width:44px;height:44px;object-fit:contain;border-radius:4px">
+        <img src="https://res.cloudinary.com/dbri9nty7/image/upload/v1779348697/LogoImage_thsfid.jpg" alt="" style="width:44px;height:44px;object-fit:contain;border-radius:4px">
         <div><div class="fltxt">Kreative Cotton</div><div class="flsub">Kids Wear</div></div>
       </div>
-      <p class="fdesc">Beautiful cotton kurtis &amp; salwar sets for girls aged 1–15 years. Soft, pure, and made with love.</p>
+      <p class="fdesc">Beautiful cotton kurtis &amp; salwar sets for girls aged 1-15 years. Soft, pure, and made with love.</p>
     </div>
     <div class="fcol"><h4>Explore</h4><ul>
       <li><a onclick="showPage('home')">Home</a></li>
@@ -719,18 +529,16 @@ footer{background:var(--dark);color:rgba(250,247,242,.7);padding:48px 5% 22px;}
       <li><a onclick="showPage('enquiry')">Send Enquiry</a></li>
     </ul></div>
   </div>
-  <div class="fbot">© 2026 Kreative Cotton. All rights reserved. | Handcrafted with ❤️ for little ones</div>
+  <div class="fbot">&#169; 2026 Kreative Cotton. All rights reserved. | Handcrafted with love for little ones</div>
 </footer>
-
 <a href="#" class="waf" id="wa-float" target="_blank" title="Chat on WhatsApp">
   <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
-
 <!-- PRODUCT MODAL -->
 <div class="moverlay" id="prod-modal">
   <div class="modal">
-    <button class="mclose" onclick="closeModal()">✕</button>
-    <div class="modal-media" id="m-media"><div class="iph"><div class="iph-i">👗</div></div></div>
+    <button class="mclose" onclick="closeModal()">&#x2715;</button>
+    <div class="modal-media" id="m-media"><div class="iph"><div class="iph-i">&#128439;</div></div></div>
     <div class="modal-info">
       <div class="mbadge" id="m-tag" style="display:none"></div>
       <div class="mtitle" id="m-name"></div>
@@ -738,17 +546,14 @@ footer{background:var(--dark);color:rgba(250,247,242,.7);padding:48px 5% 22px;}
       <div class="mdetail"><strong>Price:</strong><span id="m-price"></span></div>
       <div class="mdetail" id="m-stock-row"><strong>Stock:</strong><span id="m-stock"></span></div>
       <div class="mbtns">
-        <button class="btn-p" onclick="enquireProduct()">📩 Enquire About This</button>
-        <a class="btn-wa" id="m-wa" href="#" target="_blank">💬 WhatsApp Enquiry</a>
+        <button class="btn-p" onclick="enquireProduct()">&#128233; Enquire About This</button>
+        <a class="btn-wa" id="m-wa" href="#" target="_blank">&#128172; WhatsApp Enquiry</a>
         <button class="btn-o" onclick="closeModal()">Continue Browsing</button>
       </div>
     </div>
   </div>
 </div>
-
-<!-- ═══════════════════════════════
-     ADMIN OVERLAY
-═══════════════════════════════ -->
+<!-- ADMIN OVERLAY -->
 <div id="admin-overlay">
   <div id="adm-login">
     <div class="lbox">
@@ -761,10 +566,8 @@ footer{background:var(--dark);color:rgba(250,247,242,.7);padding:48px 5% 22px;}
       <div class="lf"><label>Password</label><input type="password" id="l-p" placeholder="••••••••" onkeydown="if(event.key==='Enter')doLogin()"></div>
       <button class="lbtn" onclick="doLogin()">Sign In</button>
       <div class="lerr" id="lerr">Incorrect credentials.</div>
-      <!-- <p class="lhint">Default: <strong>admin</strong> / <strong>kreative2025</strong></p> -->
     </div>
   </div>
-
   <div id="adm-app">
     <aside class="asb">
       <div class="asb-top">
@@ -794,50 +597,39 @@ footer{background:var(--dark);color:rgba(250,247,242,.7);padding:48px 5% 22px;}
         </div>
       </nav>
       <div class="afooter">
-        <button class="aback" onclick="closeAdmin()">← Back to Site</button>
+        <button class="aback" onclick="closeAdmin()">&#x2190; Back to Site</button>
         <button class="aout" onclick="doLogout()">Sign Out</button>
       </div>
     </aside>
-
     <div class="amain">
       <div class="atopbar">
-        <div>
-          <div class="atb-t" id="atb-t">Dashboard</div>
-          <div class="atb-s" id="atb-s">Overview of your catalogue</div>
-        </div>
+        <div><div class="atb-t" id="atb-t">Dashboard</div><div class="atb-s" id="atb-s">Overview of your catalogue</div></div>
         <div class="aclock" id="aclock"></div>
       </div>
-
-      <!-- GOOGLE SHEETS STATUS BAR -->
       <div class="gas-bar">
         <div class="gas-dot checking" id="gas-dot"></div>
-        <span id="gas-txt">Checking Google Sheets connection…</span>
+        <span id="gas-txt">Checking Google Sheets connection...</span>
       </div>
-
       <div class="acontent">
-
         <!-- DASHBOARD -->
         <div class="apanel active" id="ap-dashboard">
           <div class="astats">
-            <div class="astat"><div class="n" id="ds-cnt">—</div><div class="l">Ready Stock Items</div></div>
-            <div class="astat"><div class="n" id="ds-pcs">—</div><div class="l">Total Sets in Stock</div></div>
-            <div class="astat"><div class="n" id="ds-enq">—</div><div class="l">Enquiries Received</div></div>
+            <div class="astat"><div class="n" id="ds-cnt">-</div><div class="l">Ready Stock Items</div></div>
+            <div class="astat"><div class="n" id="ds-pcs">-</div><div class="l">Total Sets in Stock</div></div>
+            <div class="astat"><div class="n" id="ds-enq">-</div><div class="l">Enquiries Received</div></div>
           </div>
           <div class="acard">
-            <div class="acard-t">Recent Ready Stock
-              <button class="abtn ab-d ab-sm" onclick="switchP('add-stk',null)">+ Add New</button>
-            </div>
+            <div class="acard-t">Recent Ready Stock <button class="abtn ab-d ab-sm" onclick="switchP('add-stk',null)">+ Add New</button></div>
             <div class="atw"><table class="atable" id="d-stk"></table></div>
           </div>
         </div>
-
-        <!-- ADD READY STOCK -->
+        <!-- ADD STOCK -->
         <div class="apanel" id="ap-add-stk">
           <div class="acard">
             <div class="acard-t" id="stk-ft">Add Ready Stock</div>
             <div id="gas-warn" class="warn-box" style="display:none">
-              ⚠️ Google Sheets not connected. Product will save to local cache only — customers won't see it until you connect Sheets.
-              <a href="#" onclick="switchP('settings',null);return false;" style="color:var(--terra);font-weight:600"> Go to Settings →</a>
+              Google Sheets not connected. Product will save to local cache only.
+              <a href="#" onclick="switchP('settings',null);return false;" style="color:var(--terra);font-weight:600"> Go to Settings</a>
             </div>
             <div class="afgrid">
               <div class="afg"><label>Product Name *</label><input type="text" id="s-name" placeholder="e.g. Classic Floral Salwar Set"></div>
@@ -845,34 +637,25 @@ footer{background:var(--dark);color:rgba(250,247,242,.7);padding:48px 5% 22px;}
                 <label>Category *</label>
                 <select id="s-cat">
                   <option value="">Select category</option>
-                  <option>Salwar Set(10*16)</option>
-                  <option>Salwar Set(18*32)</option>
-                  <option>Salwar Set(34*38)</option>
-                  <option>Lehnga Choli(10*16)</option>
-                  <option>Lehnga Choli(18*28)</option>
-                  <option>Chord Set (18*28)</option>
-                  <option>Chord Set (30*36)</option>
-                  <option>Half Chord Set (16*26)</option>
-                  <option>Frock (12*20)</option>
+                  <option>Salwar Set(10*16)</option><option>Salwar Set(18*32)</option><option>Salwar Set(34*38)</option>
+                  <option>Lehnga Choli(10*16)</option><option>Lehnga Choli(18*28)</option>
+                  <option>Chord Set (18*28)</option><option>Chord Set (30*36)</option>
+                  <option>Half Chord Set (16*26)</option><option>Frock (12*20)</option>
                 </select>
               </div>
-              <div class="afg"><label>Price (₹)</label><input type="number" id="s-price" placeholder="e.g. 995"></div>
+              <div class="afg"><label>Price (&#8377;)</label><input type="number" id="s-price" placeholder="e.g. 995"></div>
               <div class="afg"><label>Stock (Sets available)</label><input type="number" id="s-stock" placeholder="e.g. 24"></div>
-
-              <!-- IMAGE UPLOAD -->
+              <!-- IMAGE -->
               <div class="afg full">
-                <label>Product Image <span style="color:var(--terra)">*</span></label>
-                <div class="uzone" id="s-img-zone"
-                     ondragover="zoneDrag(event,'s-img-zone',true)"
-                     ondragleave="zoneDrag(event,'s-img-zone',false)"
-                     ondrop="zoneDrop(event,'s','img')">
+                <label>Product Image *</label>
+                <div class="uzone" id="s-img-zone" ondragover="zoneDrag(event,'s-img-zone',true)" ondragleave="zoneDrag(event,'s-img-zone',false)" ondrop="zoneDrop(event,'s','img')">
                   <input type="file" id="s-img-file" accept="image/jpeg,image/png,image/webp,image/gif" onchange="handleUpload('s','img')">
-                  <div class="uz-icon">🖼️</div>
+                  <div class="uz-icon">&#128247;</div>
                   <div class="uz-title">Click to choose or drag &amp; drop an image</div>
-                  <div class="uz-sub">JPG · PNG · WEBP — max 10 MB</div>
-                  <div class="uz-hint">Uploads directly to Cloudinary CDN → permanent URL for all users</div>
+                  <div class="uz-sub">JPG · PNG · WEBP - max 10 MB</div>
+                  <div class="uz-hint">Uploads directly to Cloudinary CDN</div>
                 </div>
-                <div class="ustate" id="s-img-state"><div class="uspin"></div><span id="s-img-state-txt">Uploading…</span></div>
+                <div class="ustate" id="s-img-state"><div class="uspin"></div><span id="s-img-state-txt">Uploading...</span></div>
                 <div class="upbar-wrap" id="s-img-bar-wrap"><div class="upbar" id="s-img-bar"></div></div>
                 <div class="iprev" id="s-img-prev">
                   <div class="iprev-top">
@@ -880,8 +663,8 @@ footer{background:var(--dark);color:rgba(250,247,242,.7);padding:48px 5% 22px;}
                     <div class="ipinfo">
                       <div class="ipname" id="s-img-fname"></div>
                       <div class="ipsize" id="s-img-fsize"></div>
-                      <div style="font-size:11px;color:var(--sage);margin-bottom:6px">✅ Stored on Cloudinary CDN — visible to all users</div>
-                      <button class="iprem" onclick="removeMedia('s','img')">✕ Remove image</button>
+                      <div style="font-size:11px;color:var(--sage);margin-bottom:6px">Stored on Cloudinary CDN</div>
+                      <button class="iprem" onclick="removeMedia('s','img')">Remove image</button>
                     </div>
                   </div>
                   <div class="ipurl-row">
@@ -890,21 +673,17 @@ footer{background:var(--dark);color:rgba(250,247,242,.7);padding:48px 5% 22px;}
                   </div>
                 </div>
               </div>
-
-              <!-- VIDEO UPLOAD -->
+              <!-- VIDEO -->
               <div class="afg full">
-                <label>Product Video <span style="color:var(--muted);font-weight:300;text-transform:none;letter-spacing:0">(optional — auto-plays on product card)</span></label>
-                <div class="uzone" id="s-vid-zone"
-                     ondragover="zoneDrag(event,'s-vid-zone',true)"
-                     ondragleave="zoneDrag(event,'s-vid-zone',false)"
-                     ondrop="zoneDrop(event,'s','vid')">
+                <label>Product Video (optional)</label>
+                <div class="uzone" id="s-vid-zone" ondragover="zoneDrag(event,'s-vid-zone',true)" ondragleave="zoneDrag(event,'s-vid-zone',false)" ondrop="zoneDrop(event,'s','vid')">
                   <input type="file" id="s-vid-file" accept="video/mp4,video/quicktime,video/webm" onchange="handleUpload('s','vid')">
-                  <div class="uz-icon">🎬</div>
+                  <div class="uz-icon">&#127916;</div>
                   <div class="uz-title">Click to choose or drag &amp; drop a video</div>
-                  <div class="uz-sub">MP4 · MOV · WEBM — max 100 MB</div>
+                  <div class="uz-sub">MP4 · MOV · WEBM - max 100 MB</div>
                   <div class="uz-hint">Auto-plays on hover in product grid</div>
                 </div>
-                <div class="ustate" id="s-vid-state"><div class="uspin"></div><span id="s-vid-state-txt">Uploading…</span></div>
+                <div class="ustate" id="s-vid-state"><div class="uspin"></div><span id="s-vid-state-txt">Uploading...</span></div>
                 <div class="upbar-wrap" id="s-vid-bar-wrap"><div class="upbar" id="s-vid-bar"></div></div>
                 <div class="iprev" id="s-vid-prev">
                   <div class="iprev-top">
@@ -912,8 +691,8 @@ footer{background:var(--dark);color:rgba(250,247,242,.7);padding:48px 5% 22px;}
                     <div class="ipinfo">
                       <div class="ipname" id="s-vid-fname"></div>
                       <div class="ipsize" id="s-vid-fsize"></div>
-                      <div style="font-size:11px;color:var(--sage);margin-bottom:6px">✅ Stored on Cloudinary CDN</div>
-                      <button class="iprem" onclick="removeMedia('s','vid')">✕ Remove video</button>
+                      <div style="font-size:11px;color:var(--sage);margin-bottom:6px">Stored on Cloudinary CDN</div>
+                      <button class="iprem" onclick="removeMedia('s','vid')">Remove video</button>
                     </div>
                   </div>
                   <div class="ipurl-row">
@@ -922,114 +701,108 @@ footer{background:var(--dark);color:rgba(250,247,242,.7);padding:48px 5% 22px;}
                   </div>
                 </div>
               </div>
-
-              <!-- HERO OPTION -->
+              <!-- HERO -->
               <div class="afg full">
                 <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:13px;text-transform:none;letter-spacing:0;font-weight:400">
                   <input type="checkbox" id="s-hero" style="width:16px;height:16px;cursor:pointer;accent-color:var(--dark)">
-                  <span>⭐ Use this product's image/video as the <strong>Hero background</strong> on the Home page</span>
+                  <span>Use this product as <strong>Hero background</strong> on Home page</span>
+                </label>
+              </div>
+              <!-- IS ACTIVE -->
+              <div class="afg full">
+                <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:13px;text-transform:none;letter-spacing:0;font-weight:400">
+                  <input type="checkbox" id="s-active" checked style="width:16px;height:16px;cursor:pointer;accent-color:var(--dark)">
+                  <span><strong>Active</strong> — uncheck to hide this product from the public website</span>
                 </label>
               </div>
             </div>
-
             <div style="display:flex;gap:9px;margin-top:6px;flex-wrap:wrap;align-items:center">
-              <button class="abtn ab-d" onclick="saveProduct()">💾 Save to Google Sheets</button>
-              <button class="abtn ab-o" onclick="resetForm()">✕ Clear Form</button>
+              <button class="abtn ab-d" onclick="saveProduct()">Save to Google Sheets</button>
+              <button class="abtn ab-o" onclick="resetForm()">Clear Form</button>
             </div>
             <div class="save-status" id="save-status"></div>
           </div>
         </div>
-
         <!-- MANAGE STOCK -->
         <div class="apanel" id="ap-mgr-stk">
           <div class="acard">
-            <div class="acard-t">All Ready Stock
-              <button class="abtn ab-d ab-sm" onclick="switchP('add-stk',null)">+ Add New</button>
+            <div class="acard-t">All Ready Stock <button class="abtn ab-d ab-sm" onclick="switchP('add-stk',null)">+ Add New</button></div>
+            <!-- CATEGORY FILTER -->
+            <div class="fbar" id="mgr-cat-bar">
+              <button class="fbtn active" onclick="setMgrFilter('cat','all',event)">All Categories</button>
+              <button class="fbtn" onclick="setMgrFilter('cat','Salwar Set(10*16)',event)">Salwar (10*16)</button>
+              <button class="fbtn" onclick="setMgrFilter('cat','Salwar Set(18*32)',event)">Salwar (18*32)</button>
+              <button class="fbtn" onclick="setMgrFilter('cat','Salwar Set(34*38)',event)">Salwar (34*38)</button>
+              <button class="fbtn" onclick="setMgrFilter('cat','Lehnga Choli(10*16)',event)">Lehnga (10*16)</button>
+              <button class="fbtn" onclick="setMgrFilter('cat','Lehnga Choli(18*28)',event)">Lehnga (18*28)</button>
+              <button class="fbtn" onclick="setMgrFilter('cat','Chord Set (18*28)',event)">Chord (18*28)</button>
+              <button class="fbtn" onclick="setMgrFilter('cat','Chord Set (30*36)',event)">Chord (30*36)</button>
+              <button class="fbtn" onclick="setMgrFilter('cat','Half Chord Set (16*26)',event)">Half Chord</button>
+              <button class="fbtn" onclick="setMgrFilter('cat','Frock (12*20)',event)">Frock</button>
             </div>
+            <!-- STATUS FILTER -->
+            <div class="fbar" id="mgr-status-bar">
+              <button class="fbtn active" onclick="setMgrFilter('status','all',event)">All Status</button>
+              <button class="fbtn" onclick="setMgrFilter('status','active',event)">&#x2705; Active</button>
+              <button class="fbtn" onclick="setMgrFilter('status','inactive',event)">&#x1F6AB; Inactive</button>
+            </div>
+            <div style="font-size:12px;color:var(--muted);margin-bottom:10px" id="mgr-count"></div>
             <div class="atw"><table class="atable" id="tbl-stk"></table></div>
           </div>
         </div>
-
         <!-- SETTINGS -->
         <div class="apanel" id="ap-settings">
           <div class="acard">
-
-            <!-- GOOGLE SHEETS -->
             <div class="ssec">
-              <h3>📊 Google Sheets — Real Database</h3>
+              <h3>Google Sheets - Real Database</h3>
               <div class="info-box" style="margin-bottom:14px">
-                <strong>This is the most important step.</strong> Without this, customers won't see products.<br><br>
-                <strong>Step 1:</strong> Open your Google Sheet (ID: <code>1RH2MUyZqHEw29cZecop9Ygp1F0WKO1y5ykKAWHfODcI</code>)<br>
-                <strong>Step 2:</strong> Extensions → Apps Script → Delete old code → Paste <strong>google-apps-script.gs</strong> file → Save<br>
-                <strong>Step 3:</strong> Deploy → New Deployment → Web App → Execute as: <strong>Me</strong> → Who has access: <strong>Anyone</strong><br>
-                <strong>Step 4:</strong> Copy the Web App URL → paste below → Save &amp; Test
+                Step 1: Open Sheet (ID: 1RH2MUyZqHEw29cZecop9Ygp1F0WKO1y5ykKAWHfODcI)<br>
+                Step 2: Extensions - Apps Script - paste google-apps-script.gs - Save<br>
+                Step 3: Deploy - New Deployment - Web App - Execute as Me - Anyone<br>
+                Step 4: Copy URL - paste below - Save and Test
               </div>
-              <div class="afg">
-                <label>Apps Script Web App URL</label>
-                <input type="url" id="set-gas" placeholder="https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec">
-              </div>
-              <div style="display:flex;gap:9px;flex-wrap:wrap">
-                <button class="abtn ab-d" onclick="saveGAS()">Save &amp; Test Connection</button>
-              </div>
+              <div class="afg"><label>Apps Script Web App URL</label><input type="url" id="set-gas" placeholder="https://script.google.com/macros/s/YOUR_ID/exec"></div>
+              <button class="abtn ab-d" onclick="saveGAS()">Save and Test Connection</button>
               <div style="margin-top:10px;font-size:13px" id="gas-test-res"></div>
             </div>
             <hr style="border:none;border-top:1px solid var(--bdr);margin:20px 0">
-
-            <!-- CLOUDINARY -->
             <div class="ssec">
-              <h3>☁️ Cloudinary Setup (Image &amp; Video Storage)</h3>
-              <div class="info-box" style="margin-bottom:14px">
-                <strong>Cloud Name: dbri9nty7</strong> ✅<br>
-                To create an Upload Preset: Login → Settings → Upload → Add upload preset → Signing Mode: <strong>Unsigned</strong> → Name it <strong>Kreativecotton</strong> → Save
-              </div>
-              <div class="afgrid">  
-                <div class="afg"><label>Cloud Name</label><input type="text" id="set-cloud" placeholder="e.g. dbri9nty7"></div>
-                <div class="afg"><label>Upload Preset (Unsigned)</label><input type="text" id="set-preset" placeholder="e.g. Kreativecotton"></div>
+              <h3>Cloudinary (Image and Video Storage)</h3>
+              <div class="info-box" style="margin-bottom:14px">Cloud Name: dbri9nty7 - Upload Preset must be Unsigned and named Kreativecotton</div>
+              <div class="afgrid">
+                <div class="afg"><label>Cloud Name</label><input type="text" id="set-cloud" placeholder="dbri9nty7"></div>
+                <div class="afg"><label>Upload Preset (Unsigned)</label><input type="text" id="set-preset" placeholder="Kreativecotton"></div>
               </div>
               <div style="display:flex;gap:9px;flex-wrap:wrap">
-                <button class="abtn ab-d" onclick="saveCloudinary()">Save Cloudinary Settings</button>
+                <button class="abtn ab-d" onclick="saveCloudinary()">Save Cloudinary</button>
                 <button class="abtn ab-o" onclick="testCloudinary()">Test Connection</button>
               </div>
               <div style="margin-top:10px;font-size:13px" id="cloud-test-result"></div>
             </div>
             <hr style="border:none;border-top:1px solid var(--bdr);margin:20px 0">
-
-            <!-- EMAILJS -->
             <div class="ssec">
-              <h3>📧 EmailJS Setup (Receive Enquiries by Email)</h3>
-              <div class="info-box" style="margin-bottom:14px">
-                <strong>Free tier: 200 emails / month</strong><br>
-                1. <a href="https://emailjs.com" target="_blank">emailjs.com</a> → Sign up free<br>
-                2. Email Services → Connect Gmail → copy <strong>Service ID</strong><br>
-                3. Email Templates → Create → use variables: <code>{{from_name}}, {{from_phone}}, {{from_email}}, {{product_type}}, {{quantity}}, {{message}}</code> → copy <strong>Template ID</strong><br>
-                4. Account → copy <strong>Public Key</strong>
-              </div>
+              <h3>EmailJS (Receive Enquiries by Email)</h3>
+              <div class="info-box" style="margin-bottom:14px">Free 200 emails/month. Get Service ID, Template ID and Public Key from emailjs.com</div>
               <div class="afgrid">
                 <div class="afg"><label>Service ID</label><input type="text" id="ejs-sid" placeholder="service_xxxxxxx"></div>
                 <div class="afg"><label>Template ID</label><input type="text" id="ejs-tid" placeholder="template_xxxxxxx"></div>
                 <div class="afg"><label>Public Key</label><input type="text" id="ejs-key" placeholder="your_public_key"></div>
-                <div class="afg"><label>Your Business Email</label><input type="email" id="biz-email" placeholder="krazygirlmumbai@gmail.com"></div>
+                <div class="afg"><label>Business Email</label><input type="email" id="biz-email" placeholder="krazygirlmumbai@gmail.com"></div>
               </div>
               <button class="abtn ab-d" onclick="saveEmailSettings()">Save Email Settings</button>
             </div>
             <hr style="border:none;border-top:1px solid var(--bdr);margin:20px 0">
-
-            <!-- CONTACT -->
             <div class="ssec">
-              <h3>📱 WhatsApp &amp; Contact</h3>
+              <h3>WhatsApp and Contact</h3>
               <div class="afgrid">
-                <div class="afg"><label>WhatsApp Number (with country code, no +)</label>
-                  <input type="text" id="set-wa" placeholder="919821377274"></div>
-                <div class="afg"><label>Display Phone</label>
-                  <input type="text" id="set-ph" placeholder="+91 9821377274"></div>
+                <div class="afg"><label>WhatsApp Number (with country code, no +)</label><input type="text" id="set-wa" placeholder="919821377274"></div>
+                <div class="afg"><label>Display Phone</label><input type="text" id="set-ph" placeholder="+91 9821377274"></div>
               </div>
               <button class="abtn ab-d" onclick="saveContactSettings()">Save Contact</button>
             </div>
             <hr style="border:none;border-top:1px solid var(--bdr);margin:20px 0">
-
-            <!-- PASSWORD -->
             <div class="ssec">
-              <h3>🔒 Change Admin Password</h3>
+              <h3>Change Admin Password</h3>
               <div class="afgrid">
                 <div class="afg"><label>New Password</label><input type="password" id="np" placeholder="New password"></div>
                 <div class="afg"><label>Confirm</label><input type="password" id="cp" placeholder="Confirm password"></div>
@@ -1037,727 +810,452 @@ footer{background:var(--dark);color:rgba(250,247,242,.7);padding:48px 5% 22px;}
               <button class="abtn ab-d" onclick="changePass()">Update Password</button>
             </div>
             <hr style="border:none;border-top:1px solid var(--bdr);margin:20px 0">
-
-            <!-- DANGER -->
             <div class="ssec">
-              <h3 style="color:var(--terra)">⚠️ Danger Zone</h3>
-              <p style="font-size:13px;color:var(--muted);margin-bottom:12px">
-                Clears local browser cache only. All data remains safe in Google Sheets.
-              </p>
+              <h3 style="color:var(--terra)">Danger Zone</h3>
+              <p style="font-size:13px;color:var(--muted);margin-bottom:12px">Clears local browser cache only. Data remains safe in Google Sheets.</p>
               <button class="abtn ab-del" style="padding:9px 16px;font-size:12px" onclick="clearCache()">Clear Local Cache</button>
             </div>
-
           </div>
         </div>
-
-      </div><!-- /acontent -->
-    </div><!-- /amain -->
-  </div><!-- /adm-app -->
-</div><!-- /admin-overlay -->
-
-<div id="toast"></div>
-
-<!-- ═══════════════════════════════════════════════════
-     JAVASCRIPT — Google Sheets as primary database
-═══════════════════════════════════════════════════ -->
-<script>
-'use strict';
-
-/* ══ CONFIG ══════════════════════════════════════════════ */
-const CFG = {
-  get GAS() { return localStorage.getItem('kc_gas') || 'https://script.google.com/macros/s/AKfycbx3RhUIHBW6juXZboNAAGLxb1EMi-9dKAQ4JxdWP7B-BvWtc9CJPuLl735GHvZKZdMg/exec'; },
-  get CLOUD_NAME()  { return localStorage.getItem('kc_cloud')    || 'dbri9nty7'; },
-  get UPLOAD_PRESET(){ return localStorage.getItem('kc_preset')  || 'Kreativecotton'; },
-  get WA_NUMBER()   { return localStorage.getItem('kc_wa')       || '919821377274'; },
-  get EJS_SID()     { return localStorage.getItem('kc_ejs_sid')  || ''; },
-  get EJS_TID()     { return localStorage.getItem('kc_ejs_tid')  || ''; },
-  get EJS_KEY()     { return localStorage.getItem('kc_ejs_key')  || ''; },
-  get BIZ_EMAIL()   { return localStorage.getItem('kc_biz_em')   || 'krazygirlmumbai@gmail.com'; },
-  ITEMS_PER_PAGE: 12,
-};
-
-/* ══ HELPERS ══════════════════════════════════════════════════ */
-const $ = id => document.getElementById(id);
-const gd = k => { try { return JSON.parse(localStorage.getItem(k)) || []; } catch { return []; } };
-const sd = (k,v) => { try { localStorage.setItem(k, JSON.stringify(v)); return true; } catch { return false; } };
-const gPass = () => localStorage.getItem('kc_pw') || 'kreative2025';
-const fmtBytes = b => b < 1048576 ? (b/1024).toFixed(0)+' KB' : (b/1048576).toFixed(1)+' MB';
-
-/* ══ EmailJS INIT ════════════════════════════════════════ */
-function initEmailJS() {
-  if (CFG.EJS_KEY) { try { emailjs.init(CFG.EJS_KEY); } catch(e) {} }
-}
-initEmailJS();
-
-/* ══ GOOGLE SHEETS — PRIMARY DATABASE ════════════════════════
-   loadData()   → fetch from GAS, cache locally, return items
-   gsPost()     → write / delete / enquiry to GAS (no-cors for writes)
-   checkGAS()   → test connection, update status bar
-══════════════════════════════════════════════════════════════ */
-let _gasConnected = false;
-
-async function loadData(sheetName) {
-  const localKey = sheetName === 'ReadyStock' ? 'ready' : 'enquiries';
-  if (!CFG.GAS) return gd(localKey); // offline fallback
-
-  try {
-    const r = await fetch(`${CFG.GAS}?sheet=${sheetName}&_=${Date.now()}`);
-    if (!r.ok) throw new Error('HTTP '+r.status);
-    const j = await r.json();
-    if (j.ok) {
-      sd(localKey, j.data); // update local cache
-      return j.data;
-    }
-    throw new Error(j.error);
-  } catch(e) {
-    console.warn('GAS fetch failed, using cache:', e.message);
-    return gd(localKey);
-  }
-}
-
-async function gsPost(action, sheet, data) {
-  if (!CFG.GAS) return false;
-  try {
-    // Try with CORS first (returns response), fallback to no-cors
-    const r = await fetch(CFG.GAS, {
-      method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body: JSON.stringify({ action, sheet, data, id: data?.id })
-    });
-    const j = await r.json();
-    return j.ok;
-  } catch {
-    // no-cors fallback for write operations
-    try {
-      await fetch(CFG.GAS, {
-        method:'POST', mode:'no-cors',
-        headers:{'Content-Type':'application/json'},
-        body: JSON.stringify({ action, sheet, data, id: data?.id })
-      });
-      return true;
-    } catch { return false; }
-  }
-}
-
-async function checkGAS() {
-  const dot = $('gas-dot'), txt = $('gas-txt');
-  if (!CFG.GAS) {
-    dot.className='gas-dot err';
-    txt.textContent='⚠ Google Sheets not connected — go to Settings and add your Apps Script URL';
-    return false;
-  }
-  dot.className='gas-dot checking';
-  txt.textContent='Connecting to Google Sheets…';
-  try {
-    const r = await fetch(`${CFG.GAS}?sheet=ReadyStock&_=${Date.now()}`);
-    const j = await r.json();
-    if (j.ok) {
-      _gasConnected = true;
-      dot.className='gas-dot ok';
-      txt.textContent=`✅ Google Sheets connected — ${j.data.length} products synced. All customers see live data.`;
-      return true;
-    } else throw new Error(j.error);
-  } catch(e) {
-    dot.className='gas-dot err';
-    txt.textContent='❌ Connection failed — '+e.message+' — check Apps Script URL in Settings';
-    return false;
-  }
-}
-
-/* ══ WA LINKS ════════════════════════════════════════════════ */
-function updateLinks() {
-  const waUrl = 'https://wa.me/'+CFG.WA_NUMBER;
-  const waGreet = waUrl+'?text='+encodeURIComponent('Hi Kreative Cotton! I would like to enquire about your products.');
-  [$('wa-float'),$('wa-chat-btn'),$('wa-about')].forEach(el=>{ if(el) el.href=waGreet; });
-}
-
-/* ══ CLOUDINARY UPLOAD ════════════════════════════════════════ */
-const _media = {};
-
-function setUploadState(p, t, state, txt) {
-  const st = $(`${p}-${t}-state`), bw = $(`${p}-${t}-bar-wrap`);
-  st.className = 'ustate'; bw.className = 'upbar-wrap';
-  if (state==='uploading') {
-    st.className='ustate show uploading';
-    st.innerHTML=`<div class="uspin"></div><span>${txt||'Uploading to Cloudinary…'}</span>`;
-    bw.className='upbar-wrap show';
-  } else if (state==='done') {
-    st.className='ustate show done'; st.innerHTML=`<span>✅ ${txt}</span>`;
-  } else if (state==='error') {
-    st.className='ustate show error'; st.innerHTML=`<span>❌ ${txt}</span>`;
-  }
-}
-
-async function handleUpload(p, t) {
-  const file = $(`${p}-${t}-file`).files[0]; if (!file) return;
-  const isVid = t==='vid', maxMB = isVid?100:10;
-  if (file.size > maxMB*1048576) { setUploadState(p,t,'error',`File too large — max ${maxMB} MB`); return; }
-  if (!CFG.UPLOAD_PRESET||!CFG.CLOUD_NAME) { setUploadState(p,t,'error','Cloudinary not configured — go to Settings first'); return; }
-
-  $(`${p}-${t}-prev`).className='iprev';
-  $(`${p}-${t}-zone`).style.opacity='.55';
-  setUploadState(p,t,'uploading','Uploading to Cloudinary…');
-  $(`${p}-${t}-bar`).style.width='0%';
-
-  const fd = new FormData();
-  fd.append('file', file);
-  fd.append('upload_preset', CFG.UPLOAD_PRESET);
-  const endpoint = `https://api.cloudinary.com/v1_1/${CFG.CLOUD_NAME}/${isVid?'video':'image'}/upload`;
-
-  try {
-    const url = await xhrUpload(endpoint, fd, pct => {
-      $(`${p}-${t}-bar`).style.width=pct+'%';
-      setUploadState(p,t,'uploading',`Uploading… ${pct}%`);
-    });
-    _media[`${p}-${t}`] = url;
-    $(`${p}-${t}-thumb`).src = url;
-    $(`${p}-${t}-fname`).textContent = file.name;
-    $(`${p}-${t}-fsize`).textContent = fmtBytes(file.size);
-    $(`${p}-${t}-url-inp`).value = url;
-    $(`${p}-${t}-prev`).className='iprev show';
-    $(`${p}-${t}-bar`).style.width='100%';
-    $(`${p}-${t}-zone`).style.opacity='1';
-    setUploadState(p,t,'done',`${isVid?'Video':'Image'} uploaded to Cloudinary ✓`);
-    toast(`${isVid?'Video':'Image'} uploaded ✓`);
-  } catch(err) {
-    $(`${p}-${t}-zone`).style.opacity='1';
-    const msg = err.message.includes('400')
-      ? 'Preset not found or not Unsigned — check Settings'
-      : 'Upload failed — check Cloud Name in Settings';
-    setUploadState(p,t,'error',msg);
-    toast('Upload failed — check Cloudinary settings');
-    console.error(err);
-  }
-}
-
-function xhrUpload(url, fd, onProg) {
-  return new Promise((res,rej)=>{
-    const xhr = new XMLHttpRequest();
-    xhr.open('POST',url);
-    xhr.upload.onprogress = e=>{ if(e.lengthComputable) onProg(Math.round(e.loaded/e.total*100)); };
-    xhr.onload = ()=> xhr.status===200 ? res(JSON.parse(xhr.responseText).secure_url) : rej(new Error('HTTP '+xhr.status));
-    xhr.onerror = ()=>rej(new Error('Network error'));
-    xhr.send(fd);
-  });
-}
-
-function removeMedia(p, t) {
-  const k=`${p}-${t}`;
-  _media[k]=null; $(`${k}-file`).value='';
-  $(`${k}-prev`).className='iprev'; $(`${k}-thumb`).src='';
-  $(`${k}-url-inp`).value=''; $(`${k}-bar`).style.width='0%';
-  $(`${k}-bar-wrap`).className='upbar-wrap'; $(`${k}-state`).className='ustate';
-  $(`${k}-zone`).style.opacity='1';
-}
-
-function copyUrl(inputId) {
-  const el=$(inputId); if(!el?.value){toast('No URL yet');return;}
-  navigator.clipboard.writeText(el.value).then(()=>toast('URL copied ✓'));
-}
-
-function zoneDrag(e, zoneId, over) {
-  e.preventDefault(); $(zoneId).classList.toggle('dragover',over);
-}
-function zoneDrop(e, p, t) {
-  e.preventDefault(); $(`${p}-${t}-zone`).classList.remove('dragover');
-  const file=e.dataTransfer.files[0]; if(!file) return;
-  const inp=$(`${p}-${t}-file`), dt=new DataTransfer();
-  dt.items.add(file); inp.files=dt.files; handleUpload(p,t);
-}
-
-/* ══ PUBLIC NAVIGATION ════════════════════════════════════════ */
-const PS = { stkPage:1, stkFilter:'all', allItems:[] };
-
-async function showPage(id) {
-  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
-  $('page-'+id).classList.add('active');
-  window.scrollTo(0,0); closeMob(); updateLinks();
-  if (id==='home')  await renderHome();
-  if (id==='stock') { PS.stkPage=1; PS.stkFilter='all'; await loadAndRenderStock(); }
-}
-function toggleMob() { $('mob-menu').classList.toggle('open'); }
-function closeMob()  { $('mob-menu').classList.remove('open'); }
-
-/* ══ PRODUCT CARDS ════════════════════════════════════════════ */
-function cardHTML(item) {
-  let media;
-  if (item.vid) {
-    media = `<video src="${item.vid}" muted loop playsinline style="width:100%;height:100%;object-fit:cover"
-      onmouseenter="this.play()" onmouseleave="this.pause();this.currentTime=0"></video>
-      <div class="pplay"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--dark)"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>`;
-  } else if (item.img) {
-    media = `<img src="${item.img}" alt="${item.name}" loading="lazy"
-      onerror="this.outerHTML='<div class=iph><div class=iph-i>👗</div></div>'">`;
-  } else {
-    media = `<div class="iph"><div class="iph-i">👗</div></div>`;
-  }
-  const safe = JSON.stringify(item).replace(/'/g,"&#39;").replace(/`/g,'&#96;');
-  return `<div class="pcard" onclick='openModal(${safe})'>
-    <div class="pimg">${media}${item.tag?`<div class="pbadge">${item.tag}</div>`:''}</div>
-    <div class="pinfo">
-      <div class="pname">${item.name}</div>
-      <div class="pmeta">
-        <div class="pprice">${item.price?'₹'+item.price:'On Request'}</div>
-        <div class="psizes">${item.fabric||''}</div>
       </div>
     </div>
-  </div>`;
-}
+  </div>
+</div>
+<div id="toast"></div>
+<script>
+'use strict';
+const CFG = {
+  get GAS(){return localStorage.getItem('kc_gas')||'https://script.google.com/macros/s/AKfycbx3RhUIHBW6juXZboNAAGLxb1EMi-9dKAQ4JxdWP7B-BvWtc9CJPuLl735GHvZKZdMg/exec';},
+  get CLOUD_NAME(){return localStorage.getItem('kc_cloud')||'dbri9nty7';},
+  get UPLOAD_PRESET(){return localStorage.getItem('kc_preset')||'Kreativecotton';},
+  get WA_NUMBER(){return localStorage.getItem('kc_wa')||'919821377274';},
+  get EJS_SID(){return localStorage.getItem('kc_ejs_sid')||'';},
+  get EJS_TID(){return localStorage.getItem('kc_ejs_tid')||'';},
+  get EJS_KEY(){return localStorage.getItem('kc_ejs_key')||'';},
+  get BIZ_EMAIL(){return localStorage.getItem('kc_biz_em')||'krazygirlmumbai@gmail.com';},
+  ITEMS_PER_PAGE:12,
+};
+const $=id=>document.getElementById(id);
+const gd=k=>{try{return JSON.parse(localStorage.getItem(k))||[];}catch{return [];}};
+const sd=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v));return true;}catch{return false;}};
+const gPass=()=>localStorage.getItem('kc_pw')||'kreative2025';
+const fmtBytes=b=>b<1048576?(b/1024).toFixed(0)+' KB':(b/1048576).toFixed(1)+' MB';
+const itemIsActive=i=>i.isActive===undefined||i.isActive===true||i.isActive==='TRUE';
 
-/* ══ RENDER HOME ══════════════════════════════════════════════ */
-async function renderHome() {
+/* IMAGE PROTECTION — block right-click and drag on all product images/videos */
+document.addEventListener('contextmenu',e=>{
+  if(e.target&&(e.target.tagName==='IMG'||e.target.tagName==='VIDEO')){e.preventDefault();}
+});
+document.addEventListener('dragstart',e=>{
+  if(e.target&&(e.target.tagName==='IMG'||e.target.tagName==='VIDEO')){e.preventDefault();}
+});
+
+function initEmailJS(){if(CFG.EJS_KEY){try{emailjs.init(CFG.EJS_KEY);}catch(e){}}}
+initEmailJS();
+
+let _gasConnected=false;
+async function loadData(sheetName){
+  const localKey=sheetName==='ReadyStock'?'ready':'enquiries';
+  if(!CFG.GAS)return gd(localKey);
+  try{
+    const r=await fetch(CFG.GAS+'?sheet='+sheetName+'&_='+Date.now());
+    if(!r.ok)throw new Error('HTTP '+r.status);
+    const j=await r.json();
+    if(j.ok){sd(localKey,j.data);return j.data;}
+    throw new Error(j.error);
+  }catch(e){console.warn('GAS fetch failed:',e.message);return gd(localKey);}
+}
+async function gsPost(action,sheet,data){
+  if(!CFG.GAS)return false;
+  try{
+    const r=await fetch(CFG.GAS,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action,sheet,data,id:data&&data.id})});
+    const j=await r.json();return j.ok;
+  }catch{
+    try{await fetch(CFG.GAS,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify({action,sheet,data,id:data&&data.id})});return true;}
+    catch{return false;}
+  }
+}
+async function checkGAS(){
+  const dot=$('gas-dot'),txt=$('gas-txt');
+  if(!CFG.GAS){dot.className='gas-dot err';txt.textContent='Google Sheets not connected - go to Settings';return false;}
+  dot.className='gas-dot checking';txt.textContent='Connecting to Google Sheets...';
+  try{
+    const r=await fetch(CFG.GAS+'?sheet=ReadyStock&_='+Date.now());
+    const j=await r.json();
+    if(j.ok){_gasConnected=true;dot.className='gas-dot ok';txt.textContent='Connected - '+j.data.length+' products synced. All customers see live data.';return true;}
+    else throw new Error(j.error);
+  }catch(e){dot.className='gas-dot err';txt.textContent='Connection failed - '+e.message;return false;}
+}
+function updateLinks(){
+  const waGreet='https://wa.me/'+CFG.WA_NUMBER+'?text='+encodeURIComponent('Hi Kreative Cotton! I would like to enquire about your products.');
+  [$('wa-float'),$('wa-chat-btn'),$('wa-about')].forEach(el=>{if(el)el.href=waGreet;});
+}
+const _media={};
+function setUploadState(p,t,state,txt){
+  const st=$(`${p}-${t}-state`),bw=$(`${p}-${t}-bar-wrap`);
+  st.className='ustate';bw.className='upbar-wrap';
+  if(state==='uploading'){st.className='ustate show uploading';st.innerHTML='<div class="uspin"></div><span>'+(txt||'Uploading...')+'</span>';bw.className='upbar-wrap show';}
+  else if(state==='done'){st.className='ustate show done';st.innerHTML='<span>'+txt+'</span>';}
+  else if(state==='error'){st.className='ustate show error';st.innerHTML='<span>'+txt+'</span>';}
+}
+async function handleUpload(p,t){
+  const file=$(`${p}-${t}-file`).files[0];if(!file)return;
+  const isVid=t==='vid',maxMB=isVid?100:10;
+  if(file.size>maxMB*1048576){setUploadState(p,t,'error','File too large - max '+maxMB+' MB');return;}
+  if(!CFG.UPLOAD_PRESET||!CFG.CLOUD_NAME){setUploadState(p,t,'error','Cloudinary not configured - go to Settings');return;}
+  $(`${p}-${t}-prev`).className='iprev';$(`${p}-${t}-zone`).style.opacity='.55';
+  setUploadState(p,t,'uploading','Uploading to Cloudinary...');$(`${p}-${t}-bar`).style.width='0%';
+  const fd=new FormData();fd.append('file',file);fd.append('upload_preset',CFG.UPLOAD_PRESET);
+  const endpoint='https://api.cloudinary.com/v1_1/'+CFG.CLOUD_NAME+'/'+(isVid?'video':'image')+'/upload';
+  try{
+    const url=await xhrUpload(endpoint,fd,pct=>{$(`${p}-${t}-bar`).style.width=pct+'%';setUploadState(p,t,'uploading','Uploading... '+pct+'%');});
+    _media[`${p}-${t}`]=url;
+    $(`${p}-${t}-thumb`).src=url;$(`${p}-${t}-fname`).textContent=file.name;$(`${p}-${t}-fsize`).textContent=fmtBytes(file.size);
+    $(`${p}-${t}-url-inp`).value=url;$(`${p}-${t}-prev`).className='iprev show';
+    $(`${p}-${t}-bar`).style.width='100%';$(`${p}-${t}-zone`).style.opacity='1';
+    setUploadState(p,t,'done',(isVid?'Video':'Image')+' uploaded to Cloudinary');
+    toast((isVid?'Video':'Image')+' uploaded');
+  }catch(err){
+    $(`${p}-${t}-zone`).style.opacity='1';
+    setUploadState(p,t,'error',err.message.includes('400')?'Preset not found or not Unsigned':'Upload failed - check Cloud Name');
+    toast('Upload failed');console.error(err);
+  }
+}
+function xhrUpload(url,fd,onProg){
+  return new Promise((res,rej)=>{
+    const xhr=new XMLHttpRequest();xhr.open('POST',url);
+    xhr.upload.onprogress=e=>{if(e.lengthComputable)onProg(Math.round(e.loaded/e.total*100));};
+    xhr.onload=()=>xhr.status===200?res(JSON.parse(xhr.responseText).secure_url):rej(new Error('HTTP '+xhr.status));
+    xhr.onerror=()=>rej(new Error('Network error'));xhr.send(fd);
+  });
+}
+function removeMedia(p,t){
+  const k=`${p}-${t}`;_media[k]=null;$(`${k}-file`).value='';
+  $(`${k}-prev`).className='iprev';$(`${k}-thumb`).src='';
+  $(`${k}-url-inp`).value='';$(`${k}-bar`).style.width='0%';
+  $(`${k}-bar-wrap`).className='upbar-wrap';$(`${k}-state`).className='ustate';$(`${k}-zone`).style.opacity='1';
+}
+function copyUrl(inputId){const el=$(inputId);if(!el||!el.value){toast('No URL yet');return;}navigator.clipboard.writeText(el.value).then(()=>toast('URL copied'));}
+function zoneDrag(e,zoneId,over){e.preventDefault();$(zoneId).classList.toggle('dragover',over);}
+function zoneDrop(e,p,t){
+  e.preventDefault();$(`${p}-${t}-zone`).classList.remove('dragover');
+  const file=e.dataTransfer.files[0];if(!file)return;
+  const inp=$(`${p}-${t}-file`),dt=new DataTransfer();dt.items.add(file);inp.files=dt.files;handleUpload(p,t);
+}
+const PS={stkPage:1,stkFilter:'all',allItems:[]};
+async function showPage(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  $('page-'+id).classList.add('active');
+  window.scrollTo(0,0);closeMob();updateLinks();
+  if(id==='home')await renderHome();
+  if(id==='stock'){PS.stkPage=1;PS.stkFilter='all';await loadAndRenderStock();}
+}
+function toggleMob(){$('mob-menu').classList.toggle('open');}
+function closeMob(){$('mob-menu').classList.remove('open');}
+function cardHTML(item){
+  let media;
+  if(item.vid){
+    media='<video src="'+item.vid+'" muted loop playsinline style="width:100%;height:100%;object-fit:cover" onmouseenter="this.play()" onmouseleave="this.pause();this.currentTime=0" oncontextmenu="return false;" draggable="false"></video>'
+    +'<div class="pplay"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--dark)"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>';
+  }else if(item.img){
+    media='<img src="'+item.img+'" alt="'+item.name+'" loading="lazy" oncontextmenu="return false;" draggable="false" onerror="this.outerHTML=\'<div class=iph><div class=iph-i>&#128439;</div></div>\'">';
+  }else{
+    media='<div class="iph"><div class="iph-i">&#128439;</div></div>';
+  }
+  const safe=JSON.stringify(item).replace(/'/g,"&#39;").replace(/`/g,'&#96;');
+  return '<div class="pcard" onclick=\'openModal('+safe+')\'>'
+    +'<div class="pimg">'+media+(item.tag?'<div class="pbadge">'+item.tag+'</div>':'')+'</div>'
+    +'<div class="pinfo"><div class="pname">'+item.name+'</div>'
+    +'<div class="pmeta"><div class="pprice">'+(item.price?'&#8377;'+item.price:'On Request')+'</div>'
+    +'<div class="psizes">'+(item.fabric||'')+'</div></div></div></div>';
+}
+async function renderHome(){
   const g=$('home-grid');
-  g.innerHTML='<div class="gs-loading"><div class="gs-spin"></div><div class="gs-status">Loading from Google Sheets…</div></div>';
-  const items = await loadData('ReadyStock');
-  PS.allItems = items;
-  const recent = [...items].reverse().slice(0,8);
-  g.innerHTML = recent.length
-    ? recent.map((it,i)=>`<div style="animation:fadeUp .35s ${i*.05}s both">${cardHTML(it)}</div>`).join('')
-    : `<div class="empty"><div class="ei">✨</div><p>New products coming soon!</p></div>`;
+  g.innerHTML='<div class="gs-loading"><div class="gs-spin"></div><div class="gs-status">Loading from Google Sheets...</div></div>';
+  const all=await loadData('ReadyStock');
+  const items=all.filter(itemIsActive);
+  PS.allItems=items;
+  const recent=[...items].reverse().slice(0,8);
+  g.innerHTML=recent.length?recent.map((it,i)=>'<div style="animation:fadeUp .35s '+i*.05+'s both">'+cardHTML(it)+'</div>').join('')
+    :'<div class="empty"><div class="ei">&#x2728;</div><p>New products coming soon!</p></div>';
   applyHeroMedia(items);
 }
-
-function applyHeroMedia(items) {
-  const hero = items.find(i=>i.isHero===true||i.isHero==='TRUE');
-  if (!hero) return;
-  const r=$('hero-r'); if(!r) return;
-  if (hero.vid) {
-    r.innerHTML=`<video autoplay muted loop playsinline src="${hero.vid}"></video><div class="hero-overlay"></div><div class="hero-badge">${hero.name}</div>`;
-  } else if (hero.img) {
-    r.innerHTML=`<img src="${hero.img}" alt="${hero.name}"><div class="hero-overlay"></div><div class="hero-badge">${hero.name}</div>`;
-  }
+function applyHeroMedia(items){
+  const hero=items.find(i=>i.isHero===true||i.isHero==='TRUE');
+  if(!hero)return;const r=$('hero-r');if(!r)return;
+  if(hero.vid){r.innerHTML='<video autoplay muted loop playsinline oncontextmenu="return false;" draggable="false" src="'+hero.vid+'"></video><div class="hero-overlay"></div><div class="hero-badge">'+hero.name+'</div>';}
+  else if(hero.img){r.innerHTML='<img src="'+hero.img+'" alt="'+hero.name+'" oncontextmenu="return false;" draggable="false"><div class="hero-overlay"></div><div class="hero-badge">'+hero.name+'</div>';}
 }
-
-/* ══ RENDER STOCK (PAGINATION) ════════════════════════════════ */
-async function loadAndRenderStock() {
+async function loadAndRenderStock(){
   const g=$('stk-grid');
-  g.innerHTML='<div class="gs-loading"><div class="gs-spin"></div><div class="gs-status">Loading from Google Sheets…</div></div>';
-  const items = await loadData('ReadyStock');
-  PS.allItems = items;
+  g.innerHTML='<div class="gs-loading"><div class="gs-spin"></div><div class="gs-status">Loading from Google Sheets...</div></div>';
+  const all=await loadData('ReadyStock');
+  PS.allItems=all.filter(itemIsActive);
   renderStockGrid();
 }
-
-function renderStockGrid() {
+function renderStockGrid(){
   const g=$('stk-grid');
-  let items = PS.allItems;
-  if (PS.stkFilter!=='all') items=items.filter(i=>i.fabric===PS.stkFilter);
-
-  if (!items.length) {
-    g.innerHTML=`<div class="empty"><div class="ei">👗</div><p>No products yet. Check back soon!</p></div>`;
-    $('stk-pag').innerHTML=''; $('stk-pag-info').textContent=''; return;
-  }
-
-  const total=items.length, pages=Math.ceil(total/CFG.ITEMS_PER_PAGE);
-  const cur=Math.min(PS.stkPage,pages); PS.stkPage=cur;
+  let items=PS.allItems;
+  if(PS.stkFilter!=='all')items=items.filter(i=>i.fabric===PS.stkFilter);
+  if(!items.length){g.innerHTML='<div class="empty"><div class="ei">&#128439;</div><p>No products yet. Check back soon!</p></div>';$('stk-pag').innerHTML='';$('stk-pag-info').textContent='';return;}
+  const total=items.length,pages=Math.ceil(total/CFG.ITEMS_PER_PAGE);
+  const cur=Math.min(PS.stkPage,pages);PS.stkPage=cur;
   const start=(cur-1)*CFG.ITEMS_PER_PAGE;
-  const slice=items.slice(start,start+CFG.ITEMS_PER_PAGE);
-
-  g.innerHTML=slice.map((it,i)=>`<div style="animation:fadeUp .35s ${i*.05}s both">${cardHTML(it)}</div>`).join('');
-
+  g.innerHTML=items.slice(start,start+CFG.ITEMS_PER_PAGE).map((it,i)=>'<div style="animation:fadeUp .35s '+i*.05+'s both">'+cardHTML(it)+'</div>').join('');
   const pag=$('stk-pag');
-  if (pages<=1) { pag.innerHTML=''; $('stk-pag-info').textContent=total+' products'; return; }
+  if(pages<=1){pag.innerHTML='';$('stk-pag-info').textContent=total+' products';return;}
   let h='';
-  if (cur>1) h+=`<button class="pag-btn" onclick="goStk(${cur-1})">← Prev</button>`;
-  for (let p=1;p<=pages;p++) {
-    if (p===1||p===pages||Math.abs(p-cur)<=1)
-      h+=`<button class="pag-btn ${p===cur?'active':''}" onclick="goStk(${p})">${p}</button>`;
-    else if (Math.abs(p-cur)===2) h+=`<span style="padding:8px 4px;color:var(--muted)">…</span>`;
+  if(cur>1)h+='<button class="pag-btn" onclick="goStk('+(cur-1)+')">Prev</button>';
+  for(let p=1;p<=pages;p++){
+    if(p===1||p===pages||Math.abs(p-cur)<=1)h+='<button class="pag-btn '+(p===cur?'active':'')+'" onclick="goStk('+p+')">'+p+'</button>';
+    else if(Math.abs(p-cur)===2)h+='<span style="padding:8px 4px;color:var(--muted)">...</span>';
   }
-  if (cur<pages) h+=`<button class="pag-btn" onclick="goStk(${cur+1})">Next →</button>`;
+  if(cur<pages)h+='<button class="pag-btn" onclick="goStk('+(cur+1)+')">Next</button>';
   pag.innerHTML=h;
-  $('stk-pag-info').textContent=`Showing ${start+1}–${Math.min(start+CFG.ITEMS_PER_PAGE,total)} of ${total} products`;
+  $('stk-pag-info').textContent='Showing '+(start+1)+'-'+Math.min(start+CFG.ITEMS_PER_PAGE,total)+' of '+total+' products';
 }
-
-function goStk(p) { PS.stkPage=p; renderStockGrid(); window.scrollTo({top:70,behavior:'smooth'}); }
-
-function filterStock(fab, e) {
-  document.querySelectorAll('.fbtn').forEach(b=>b.classList.remove('active'));
-  e.target.classList.add('active');
-  PS.stkPage=1; PS.stkFilter=fab;
-  renderStockGrid();
+function goStk(p){PS.stkPage=p;renderStockGrid();window.scrollTo({top:70,behavior:'smooth'});}
+function filterStock(fab,e){
+  document.querySelectorAll('#page-stock .fbtn').forEach(b=>b.classList.remove('active'));
+  e.target.classList.add('active');PS.stkPage=1;PS.stkFilter=fab;renderStockGrid();
 }
-
-/* ══ PRODUCT MODAL ════════════════════════════════════════════ */
 let _mi=null;
-function openModal(item) {
-  _mi=item;
-  const mm=$('m-media');
-  if (item.vid) {
-    mm.innerHTML=`<video src="${item.vid}" controls autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;display:block"></video>`;
-  } else if (item.img) {
-    mm.innerHTML=`<img src="${item.img}" alt="${item.name}" style="width:100%;height:100%;object-fit:cover;display:block">`;
-  } else {
-    mm.innerHTML=`<div class="iph"><div class="iph-i">👗</div></div>`;
-  }
-  const tag=$('m-tag');
-  tag.textContent=item.tag||''; tag.style.display=item.tag?'inline-block':'none';
-  $('m-name').textContent=item.name;
-  $('m-cat').textContent=item.fabric||'—';
-  $('m-price').textContent=item.price?'₹'+item.price+' per piece/set':'On Request';
+function openModal(item){
+  _mi=item;const mm=$('m-media');
+  if(item.vid){mm.innerHTML='<video src="'+item.vid+'" controls autoplay muted loop playsinline oncontextmenu="return false;" draggable="false" controlslist="nodownload" style="width:100%;height:100%;object-fit:cover;display:block"></video>';}
+  else if(item.img){mm.innerHTML='<img src="'+item.img+'" alt="'+item.name+'" oncontextmenu="return false;" draggable="false" style="width:100%;height:100%;object-fit:cover;display:block">';}
+  else{mm.innerHTML='<div class="iph"><div class="iph-i">&#128439;</div></div>';}
+  const tag=$('m-tag');tag.textContent=item.tag||'';tag.style.display=item.tag?'inline-block':'none';
+  $('m-name').textContent=item.name;$('m-cat').textContent=item.fabric||'-';
+  $('m-price').textContent=item.price?'&#8377;'+item.price+' per piece/set':'On Request';
   $('m-stock').textContent=item.stock?item.stock+' sets available':'';
   $('m-stock-row').style.display=item.stock?'flex':'none';
-  const waMsg=encodeURIComponent(`Hi Kreative Cotton! I'm interested in ${item.name}. Price: ₹${item.price||'?'}`);
-  $('m-wa').href=`https://wa.me/${CFG.WA_NUMBER}?text=${waMsg}`;
-  $('prod-modal').classList.add('open');
-  document.body.style.overflow='hidden';
+  $('m-wa').href='https://wa.me/'+CFG.WA_NUMBER+'?text='+encodeURIComponent('Hi Kreative Cotton! I\'m interested in '+item.name+'. Price: &#8377;'+(item.price||'?'));
+  $('prod-modal').classList.add('open');document.body.style.overflow='hidden';
 }
-function closeModal() {
-  $('prod-modal').classList.remove('open');
-  document.body.style.overflow='';
-  const v=$('m-media').querySelector('video'); if(v){v.pause();v.src='';}
+function closeModal(){
+  $('prod-modal').classList.remove('open');document.body.style.overflow='';
+  const v=$('m-media').querySelector('video');if(v){v.pause();v.src='';}
 }
-function enquireProduct() {
+function enquireProduct(){
   closeModal();
-  setTimeout(()=>{
-    showPage('enquiry');
-    if(_mi) $('eq-msg').value=`I am interested in ${_mi.name}. Price: ₹${_mi.price||'?'}`;
-  },200);
+  setTimeout(()=>{showPage('enquiry');if(_mi)$('eq-msg').value='I am interested in '+_mi.name+'. Price: &#8377;'+(_mi.price||'?');},200);
 }
-
-/* ══ ENQUIRY — EMAIL + WHATSAPP + SHEETS ═════════════════════ */
-async function submitEnquiry(method) {
-  const name=$('eq-name').value.trim(), phone=$('eq-phone').value.trim();
-  const email=$('eq-email').value.trim(), type=$('eq-type').value;
-  const qty=$('eq-qty').value, msg=$('eq-msg').value.trim();
-  if (!name||!phone) { alert('Please fill in your name and phone number.'); return; }
-
-  $('eq-suc').style.display='none'; $('eq-err').style.display='none';
-  const enqData = { name, phone, email, type, qty, message:msg };
-
-  // Always save to Google Sheets
-  gsPost('enquiry','Enquiries',enqData);
-
-  if (method==='wa') {
-    const text=`*New Enquiry — Kreative Cotton*\n\n👤 *Name:* ${name}\n📞 *Phone:* ${phone}\n📧 *Email:* ${email||'—'}\n👗 *Type:* ${type||'—'}\n📦 *Quantity:* ${qty||'—'}\n\n💬 *Message:*\n${msg||'—'}`;
-    window.open(`https://wa.me/${CFG.WA_NUMBER}?text=${encodeURIComponent(text)}`, '_blank');
-    $('eq-suc').style.display='block';
-    $('eq-suc').innerHTML='✅ Opening WhatsApp with your enquiry details…';
-    clearEnqForm(); return;
+async function submitEnquiry(method){
+  const name=$('eq-name').value.trim(),phone=$('eq-phone').value.trim();
+  const email=$('eq-email').value.trim(),type=$('eq-type').value;
+  const qty=$('eq-qty').value,msg=$('eq-msg').value.trim();
+  if(!name||!phone){alert('Please fill in your name and phone number.');return;}
+  $('eq-suc').style.display='none';$('eq-err').style.display='none';
+  gsPost('enquiry','Enquiries',{name,phone,email,type,qty,message:msg});
+  if(method==='wa'){
+    window.open('https://wa.me/'+CFG.WA_NUMBER+'?text='+encodeURIComponent('*New Enquiry - Kreative Cotton*\n\nName: '+name+'\nPhone: '+phone+'\nEmail: '+(email||'-')+'\nType: '+(type||'-')+'\nQty: '+(qty||'-')+'\nMessage:\n'+(msg||'-')),'_blank');
+    $('eq-suc').style.display='block';$('eq-suc').innerHTML='Opening WhatsApp with your enquiry...';
+    clearEnqForm();return;
   }
-
-  if (!CFG.EJS_SID||!CFG.EJS_TID||!CFG.EJS_KEY) {
-    $('eq-err').style.display='block';
-    $('eq-err').innerHTML='⚠️ Email not configured. Please use WhatsApp button or ask admin to set up EmailJS in Settings.';
-    return;
+  if(!CFG.EJS_SID||!CFG.EJS_TID||!CFG.EJS_KEY){
+    $('eq-err').style.display='block';$('eq-err').innerHTML='Email not configured. Please use WhatsApp or call us directly.';return;
   }
-  const btn=$('enq-email-btn');
-  btn.textContent='⏳ Sending…'; btn.disabled=true;
-  try {
-    await emailjs.send(CFG.EJS_SID,CFG.EJS_TID,{
-      to_email:CFG.BIZ_EMAIL, from_name:name, from_phone:phone,
-      from_email:email, product_type:type||'—', quantity:qty||'—',
-      message:msg||'—', reply_to:email
-    });
-    $('eq-suc').style.display='block';
-    $('eq-suc').innerHTML='✅ Enquiry sent! We\'ll get back to you within 24 hours.';
-    clearEnqForm();
-  } catch(e) {
-    $('eq-err').style.display='block';
-    $('eq-err').innerHTML='❌ Email failed. Please use WhatsApp or contact us directly.';
-    console.error(e);
-  }
-  btn.textContent='📧 Send via Email'; btn.disabled=false;
+  const btn=$('enq-email-btn');btn.textContent='Sending...';btn.disabled=true;
+  try{
+    await emailjs.send(CFG.EJS_SID,CFG.EJS_TID,{to_email:CFG.BIZ_EMAIL,from_name:name,from_phone:phone,from_email:email,product_type:type||'-',quantity:qty||'-',message:msg||'-',reply_to:email});
+    $('eq-suc').style.display='block';$('eq-suc').innerHTML='Enquiry sent! We will get back to you within 24 hours.';clearEnqForm();
+  }catch(e){$('eq-err').style.display='block';$('eq-err').innerHTML='Email failed. Please use WhatsApp or contact us directly.';console.error(e);}
+  btn.textContent='Send via Email';btn.disabled=false;
 }
-function clearEnqForm() {
-  ['eq-name','eq-phone','eq-email','eq-qty','eq-msg'].forEach(id=>$(id).value='');
-  $('eq-type').selectedIndex=0;
+function clearEnqForm(){['eq-name','eq-phone','eq-email','eq-qty','eq-msg'].forEach(id=>$(id).value='');$('eq-type').selectedIndex=0;}
+function openAdmin(){
+  $('admin-overlay').classList.add('open');document.body.style.overflow='hidden';
+  if(sessionStorage.getItem('kc_auth')==='1'){$('adm-login').style.display='none';refreshDash();checkGAS();}
+  else{$('adm-login').style.display='flex';}
 }
-
-/* ══ ADMIN ════════════════════════════════════════════════════ */
-function openAdmin() {
-  $('admin-overlay').classList.add('open');
-  document.body.style.overflow='hidden';
-  if (sessionStorage.getItem('kc_auth')==='1') {
-    $('adm-login').style.display='none';
-    refreshDash(); checkGAS();
-  } else { $('adm-login').style.display='flex'; }
+function closeAdmin(){$('admin-overlay').classList.remove('open');document.body.style.overflow='';renderHome();}
+function doLogin(){
+  const u=$('l-u').value.trim(),p=$('l-p').value.trim();
+  if(u==='admin'&&p===gPass()){sessionStorage.setItem('kc_auth','1');$('adm-login').style.display='none';$('lerr').style.display='none';refreshDash();checkGAS();}
+  else{$('lerr').style.display='block';}
 }
-function closeAdmin() {
-  $('admin-overlay').classList.remove('open');
-  document.body.style.overflow='';
-  renderHome();
+function doLogout(){sessionStorage.removeItem('kc_auth');$('adm-login').style.display='flex';$('l-u').value='';$('l-p').value='';}
+function changePass(){
+  const n=$('np').value,c=$('cp').value;
+  if(!n)return toast('Enter a new password');if(n!==c)return toast('Passwords do not match');
+  localStorage.setItem('kc_pw',n);toast('Password updated');$('np').value='';$('cp').value='';
 }
-function doLogin() {
-  const u=$('l-u').value.trim(), p=$('l-p').value.trim();
-  if (u==='admin'&&p===gPass()) {
-    sessionStorage.setItem('kc_auth','1');
-    $('adm-login').style.display='none'; $('lerr').style.display='none';
-    refreshDash(); checkGAS();
-  } else { $('lerr').style.display='block'; }
-}
-function doLogout() {
-  sessionStorage.removeItem('kc_auth');
-  $('adm-login').style.display='flex';
-  $('l-u').value=''; $('l-p').value='';
-}
-function changePass() {
-  const n=$('np').value, c=$('cp').value;
-  if (!n) return toast('Enter a new password');
-  if (n!==c) return toast('Passwords do not match');
-  localStorage.setItem('kc_pw',n); toast('Password updated ✓');
-  $('np').value=''; $('cp').value='';
-}
-
-/* ══ ADMIN PANELS ═════════════════════════════════════════════ */
-const PM = {
-  'dashboard':['Dashboard','Overview of your catalogue'],
-  'add-stk':  ['Add Ready Stock','Add new stock item to Google Sheets'],
-  'mgr-stk':  ['Manage Stock','Edit or remove stock items'],
-  'settings': ['Settings','Configure Google Sheets, Cloudinary, Email & WhatsApp'],
-};
-function switchP(id, el) {
-  document.querySelectorAll('.apanel').forEach(p=>p.classList.remove('active'));
-  $('ap-'+id).classList.add('active');
+const PM={'dashboard':['Dashboard','Overview'],'add-stk':['Add Ready Stock','Add new stock item'],'mgr-stk':['Manage Stock','Edit or remove stock items'],'settings':['Settings','Configure settings']};
+function switchP(id,el){
+  document.querySelectorAll('.apanel').forEach(p=>p.classList.remove('active'));$('ap-'+id).classList.add('active');
   document.querySelectorAll('.alnk').forEach(l=>l.classList.remove('active'));
-  (el||document.querySelector(`.alnk[data-p="${id}"]`))?.classList.add('active');
-  const [t,s]=PM[id]||['Admin',''];
-  $('atb-t').textContent=t; $('atb-s').textContent=s;
-  if (id==='dashboard') refreshDash();
-  if (id==='mgr-stk')   loadManageTable();
-  if (id==='settings')  loadSettings();
-  if (id==='add-stk')   $('gas-warn').style.display = CFG.GAS?'none':'block';
+  (el||document.querySelector('.alnk[data-p="'+id+'"]'))&&(el||document.querySelector('.alnk[data-p="'+id+'"]')).classList.add('active');
+  const pm=PM[id]||['Admin',''];$('atb-t').textContent=pm[0];$('atb-s').textContent=pm[1];
+  if(id==='dashboard')refreshDash();
+  if(id==='mgr-stk'){MGR.catFilter='all';MGR.statusFilter='all';
+    document.querySelectorAll('#mgr-cat-bar .fbtn').forEach((b,i)=>{b.classList.toggle('active',i===0);});
+    document.querySelectorAll('#mgr-status-bar .fbtn').forEach((b,i)=>{b.classList.toggle('active',i===0);});
+    loadManageTable();}
+  if(id==='settings')loadSettings();
+  if(id==='add-stk')$('gas-warn').style.display=CFG.GAS?'none':'block';
 }
-
-/* ══ DASHBOARD ════════════════════════════════════════════════ */
-async function refreshDash() {
-  const items = await loadData('ReadyStock');
-  const enqs  = await loadData('Enquiries');
-  $('ds-cnt').textContent = items.length;
-  $('ds-pcs').textContent = items.reduce((x,i)=>x+(+i.stock||0),0);
-  $('ds-enq').textContent = enqs.length;
-  renderDashMini(items.slice(-5).reverse());
+async function refreshDash(){
+  const items=await loadData('ReadyStock'),enqs=await loadData('Enquiries');
+  $('ds-cnt').textContent=items.length;
+  $('ds-pcs').textContent=items.reduce((x,i)=>x+(+i.stock||0),0);
+  $('ds-enq').textContent=enqs.length;
+  const t=$('d-stk'),recent=items.slice(-5).reverse();
+  if(!recent.length){t.innerHTML='<tr><td colspan="5" style="color:var(--muted);padding:14px">No items yet.</td></tr>';return;}
+  t.innerHTML='<thead><tr><th></th><th>Name</th><th>Category</th><th>Price</th><th>Status</th></tr></thead><tbody>'+
+    recent.map(i=>'<tr><td>'+(i.img?'<img src="'+i.img+'" class="athumb">':'<div class="ano-img">&#128439;</div>')+'</td>'
+      +'<td><strong>'+i.name+'</strong>'+(i.isHero===true||i.isHero==='TRUE'?' &#x2B50;':'')+'</td>'
+      +'<td>'+(i.fabric||'-')+'</td><td>'+(i.price?'&#8377;'+i.price:'-')+'</td>'
+      +'<td>'+(itemIsActive(i)?'<span class="badge-active">Active</span>':'<span class="badge-inactive">Inactive</span>')+'</td>'
+    +'</tr>').join('')+'</tbody>';
 }
-function renderDashMini(items) {
-  const t=$('d-stk');
-  if (!items.length) { t.innerHTML='<tr><td colspan="5" style="color:var(--muted);padding:14px">No items yet. Add your first product!</td></tr>'; return; }
-  t.innerHTML=`<thead><tr><th></th><th>Name</th><th>Category</th><th>Price</th><th>Media</th></tr></thead><tbody>`+
-    items.map(i=>`<tr>
-      <td>${i.img?`<img src="${i.img}" class="athumb">`:'<div class="ano-img">👗</div>'}</td>
-      <td><strong>${i.name}</strong>${(i.isHero===true||i.isHero==='TRUE')?' ⭐':''}</td>
-      <td>${i.fabric||'—'}</td>
-      <td>${i.price?'₹'+i.price:'—'}</td>
-      <td>${i.vid?'<span class="badge-vid">📹 Video</span>':(i.img?'<span class="badge-live">🖼 Image</span>':'—')}</td>
-    </tr>`).join('')+'</tbody>';
-}
-
-/* ══ SAVE PRODUCT → GOOGLE SHEETS ════════════════════════════ */
 let _eid=null;
-
-async function saveProduct() {
-  const name=$('s-name').value.trim();
-  if (!name) return toast('Product name is required');
-
-  const existing = _eid ? (gd('ready').find(i=>i.id===_eid)||{}) : {};
-  const item = {
-    id:      _eid||Date.now().toString(),
-    name,
-    fabric:  $('s-cat').value,
-    price:   $('s-price').value,
-    stock:   $('s-stock').value,
-    img:     _media['s-img']!==undefined ? (_media['s-img']||'') : (existing.img||''),
-    vid:     _media['s-vid']!==undefined ? (_media['s-vid']||'') : (existing.vid||''),
-    isHero:  !!$('s-hero').checked,
-    created: existing.created||new Date().toISOString()
-  };
-
-  // Show saving status
-  const ss=$('save-status');
-  ss.className='save-status show saving'; ss.textContent='⏳ Saving to Google Sheets…';
-
-  // If hero, clear others in local cache
-  if (item.isHero) sd('ready', gd('ready').map(i=>({...i,isHero:false})));
-
-  // Update local cache immediately so UI refreshes fast
+async function saveProduct(){
+  const name=$('s-name').value.trim();if(!name)return toast('Product name is required');
+  const existing=_eid?(gd('ready').find(i=>i.id===_eid)||{}):{};
+  const item={id:_eid||Date.now().toString(),name,fabric:$('s-cat').value,price:$('s-price').value,stock:$('s-stock').value,
+    img:_media['s-img']!==undefined?(_media['s-img']||''):(existing.img||''),
+    vid:_media['s-vid']!==undefined?(_media['s-vid']||''):(existing.vid||''),
+    isHero:!!$('s-hero').checked,isActive:!!$('s-active').checked,
+    created:existing.created||new Date().toISOString()};
+  const ss=$('save-status');ss.className='save-status show saving';ss.textContent='Saving to Google Sheets...';
+  if(item.isHero)sd('ready',gd('ready').map(i=>({...i,isHero:false})));
   let items=gd('ready');
-  if (_eid) { const idx=items.findIndex(i=>i.id===_eid); idx>-1?items[idx]=item:items.push(item); }
+  if(_eid){const idx=items.findIndex(i=>i.id===_eid);idx>-1?items[idx]=item:items.push(item);}
   else items.push(item);
-  sd('ready',items);
-  PS.allItems=items;
-
-  // Save to Google Sheets
-  if (CFG.GAS) {
-    const ok = await gsPost('save','ReadyStock',item);
-    if (ok) {
-      ss.className='save-status show saved';
-      ss.innerHTML=`✅ <strong>Saved to Google Sheets!</strong> All customers worldwide can now see this product.`;
-      toast(_eid?'Updated & synced to Google Sheets ✓':'Saved to Google Sheets ✓');
-    } else {
-      ss.className='save-status show local';
-      ss.innerHTML='⚠ Saved locally. Google Sheets sync may have failed — product visible on this device only. Try again or check connection in Settings.';
-      toast(_eid?'Updated (local only)':'Saved (local only)');
-    }
-  } else {
-    ss.className='save-status show local';
-    ss.innerHTML='⚠ <strong>Saved locally only.</strong> Customers cannot see this product yet. Go to Settings → connect Google Sheets.';
-    toast('Saved locally (connect Google Sheets for all users)');
-  }
-
-  _eid=null; resetForm(); refreshDash();
+  sd('ready',items);PS.allItems=items;
+  if(CFG.GAS){
+    const ok=await gsPost('save','ReadyStock',item);
+    if(ok){ss.className='save-status show saved';ss.innerHTML='Saved to Google Sheets! All customers can now see this product.';toast(_eid?'Updated and synced':'Saved to Google Sheets');}
+    else{ss.className='save-status show local';ss.innerHTML='Saved locally. Google Sheets sync may have failed.';toast(_eid?'Updated (local only)':'Saved (local only)');}
+  }else{ss.className='save-status show local';ss.innerHTML='Saved locally only. Connect Google Sheets in Settings.';toast('Saved locally');}
+  _eid=null;resetForm();refreshDash();
 }
-
-/* ══ MANAGE TABLE ═════════════════════════════════════════════ */
-async function loadManageTable() {
+/* ══ MANAGE TABLE with category + status filter ══ */
+const MGR={catFilter:'all',statusFilter:'all',allItems:[]};
+async function loadManageTable(){
   const t=$('tbl-stk');
-  t.innerHTML='<tr><td colspan="6" style="padding:14px"><div class="gs-spin" style="margin:0;width:24px;height:24px;border-width:2px"></div></td></tr>';
-  const items = await loadData('ReadyStock');
-  if (!items.length) { t.innerHTML='<tr><td colspan="6" style="color:var(--muted);padding:14px">No items yet.</td></tr>'; return; }
-  t.innerHTML=`<thead><tr><th></th><th>Name</th><th>Category</th><th>Price</th><th>Stock</th><th>Actions</th></tr></thead><tbody>`+
-    items.map(i=>`<tr>
-      <td>${i.img?`<img src="${i.img}" class="athumb">`:'<div class="ano-img">👗</div>'}</td>
-      <td><strong>${i.name}</strong>${(i.isHero===true||i.isHero==='TRUE')?'<br><span style="font-size:10px;color:var(--gold)">⭐ Hero bg</span>':''}</td>
-      <td>${i.fabric||'—'}</td>
-      <td>${i.price?'₹'+i.price:'—'}</td>
-      <td>${i.stock||'—'} sets</td>
-      <td><div class="tdacts">
-        <button class="abtn ab-o ab-sm" onclick="editItem('${i.id}')">Edit</button>
-        <button class="abtn ab-del" onclick="delItem('${i.id}')">Delete</button>
-      </div></td>
-    </tr>`).join('')+'</tbody>';
+  t.innerHTML='<tr><td colspan="7" style="padding:14px"><div class="gs-spin" style="margin:0;width:24px;height:24px;border-width:2px"></div></td></tr>';
+  MGR.allItems=await loadData('ReadyStock');
+  renderManageTable();
 }
-
-function editItem(id) {
-  const item=gd('ready').find(i=>i.id===id); if(!item) return;
-  _eid=id;
-  switchP('add-stk',document.querySelector('.alnk[data-p="add-stk"]'));
-  $('s-name').value=item.name||''; $('s-cat').value=item.fabric||'';
-  $('s-price').value=item.price||''; $('s-stock').value=item.stock||'';
+function renderManageTable(){
+  const t=$('tbl-stk');
+  let items=MGR.allItems;
+  if(MGR.catFilter!=='all')items=items.filter(i=>i.fabric===MGR.catFilter);
+  if(MGR.statusFilter==='active')items=items.filter(i=>itemIsActive(i));
+  if(MGR.statusFilter==='inactive')items=items.filter(i=>!itemIsActive(i));
+  const mc=$('mgr-count');if(mc)mc.textContent='Showing '+items.length+' of '+MGR.allItems.length+' products';
+  if(!items.length){t.innerHTML='<tr><td colspan="7" style="color:var(--muted);padding:14px">No products match this filter.</td></tr>';return;}
+  t.innerHTML='<thead><tr><th></th><th>Name</th><th>Category</th><th>Price</th><th>Stock</th><th>Status</th><th>Actions</th></tr></thead><tbody>'+
+    items.map(i=>'<tr><td>'+(i.img?'<img src="'+i.img+'" class="athumb" oncontextmenu="return false;" draggable="false">':'<div class="ano-img">&#128439;</div>')+'</td>'
+      +'<td><strong>'+i.name+'</strong>'+(i.isHero===true||i.isHero==='TRUE'?'<br><span style="font-size:10px;color:var(--gold)">Hero bg</span>':'')+'</td>'
+      +'<td>'+(i.fabric||'-')+'</td>'
+      +'<td>'+(i.price?'&#8377;'+i.price:'-')+'</td>'
+      +'<td>'+(i.stock||'-')+' sets</td>'
+      +'<td>'+(itemIsActive(i)?'<span class="badge-active">Active</span>':'<span class="badge-inactive">Inactive</span>')+'</td>'
+      +'<td><div class="tdacts">'
+        +'<button class="abtn ab-o ab-sm" onclick="editItem(\''+i.id+'\')">Edit</button>'
+        +'<button class="abtn '+(itemIsActive(i)?'ab-toggle-on':'ab-toggle-off')+'" onclick="toggleActive(\''+i.id+'\')">'+(itemIsActive(i)?'Deactivate':'Activate')+'</button>'
+        +'<button class="abtn ab-del" onclick="delItem(\''+i.id+'\')">Delete</button>'
+      +'</div></td></tr>').join('')+'</tbody>';
+}
+function setMgrFilter(type,val,e){
+  const barId=type==='cat'?'mgr-cat-bar':'mgr-status-bar';
+  document.querySelectorAll('#'+barId+' .fbtn').forEach(b=>b.classList.remove('active'));
+  e.target.classList.add('active');
+  if(type==='cat')MGR.catFilter=val;else MGR.statusFilter=val;
+  renderManageTable();
+}
+async function toggleActive(id){
+  const items=gd('ready');const idx=items.findIndex(i=>i.id===id);if(idx===-1)return;
+  const item={...items[idx],isActive:!itemIsActive(items[idx])};
+  items[idx]=item;sd('ready',items);
+  MGR.allItems=MGR.allItems.map(i=>i.id===id?item:i);
+  PS.allItems=PS.allItems.map(i=>i.id===id?item:i);
+  renderManageTable();
+  toast(itemIsActive(item)?'Product activated - now visible to customers':'Product deactivated - hidden from customers');
+  await gsPost('save','ReadyStock',item);
+}
+function editItem(id){
+  const item=gd('ready').find(i=>i.id===id);if(!item)return;
+  _eid=id;switchP('add-stk',document.querySelector('.alnk[data-p="add-stk"]'));
+  $('s-name').value=item.name||'';$('s-cat').value=item.fabric||'';
+  $('s-price').value=item.price||'';$('s-stock').value=item.stock||'';
   $('s-hero').checked=item.isHero===true||item.isHero==='TRUE';
+  $('s-active').checked=itemIsActive(item);
   ['img','vid'].forEach(t=>{
-    const url=item[t]; if(!url) return;
-    _media[`s-${t}`]=url;
-    $(`s-${t}-thumb`).src=url;
-    $(`s-${t}-fname`).textContent='Existing file';
-    $(`s-${t}-fsize`).textContent='';
-    $(`s-${t}-url-inp`).value=url;
-    $(`s-${t}-prev`).className='iprev show';
-    $(`s-${t}-zone`).style.opacity='.6';
+    const url=item[t];if(!url)return;
+    _media['s-'+t]=url;$('s-'+t+'-thumb').src=url;$('s-'+t+'-fname').textContent='Existing file';$('s-'+t+'-fsize').textContent='';
+    $('s-'+t+'-url-inp').value=url;$('s-'+t+'-prev').className='iprev show';$('s-'+t+'-zone').style.opacity='.6';
     setUploadState('s',t,'done','Using existing Cloudinary file');
   });
-  $('stk-ft').textContent='Editing: '+item.name;
-  toast('Editing: '+item.name);
+  $('stk-ft').textContent='Editing: '+item.name;toast('Editing: '+item.name);
 }
-
-async function delItem(id) {
-  if (!confirm('Delete this item? It will be removed from Google Sheets too.')) return;
-  const items=gd('ready').filter(i=>i.id!==id);
-  sd('ready',items); PS.allItems=items;
-  await gsPost('delete','ReadyStock',{id});
-  toast('Deleted from Google Sheets ✓');
-  loadManageTable(); refreshDash();
+async function delItem(id){
+  if(!confirm('Delete this item? It will be removed from Google Sheets too.'))return;
+  const items=gd('ready').filter(i=>i.id!==id);sd('ready',items);PS.allItems=items;MGR.allItems=MGR.allItems.filter(i=>i.id!==id);
+  await gsPost('delete','ReadyStock',{id});toast('Deleted from Google Sheets');renderManageTable();refreshDash();
 }
-
-/* ══ RESET FORM ═══════════════════════════════════════════════ */
-function resetForm() {
-  _eid=null;
-  ['s-name','s-price','s-stock'].forEach(id=>{const el=$(id);if(el)el.value='';});
-  $('s-cat').selectedIndex=0; $('s-hero').checked=false;
+function resetForm(){
+  _eid=null;['s-name','s-price','s-stock'].forEach(id=>{const el=$(id);if(el)el.value='';});
+  $('s-cat').selectedIndex=0;$('s-hero').checked=false;$('s-active').checked=true;
   ['img','vid'].forEach(t=>removeMedia('s',t));
   $('stk-ft').textContent='Add Ready Stock';
-  $('save-status').className='save-status'; $('save-status').textContent='';
+  $('save-status').className='save-status';$('save-status').textContent='';
   $('gas-warn').style.display=CFG.GAS?'none':'block';
 }
-
-/* ══ SETTINGS ═════════════════════════════════════════════════ */
-function loadSettings() {
-  $('set-gas').value    = CFG.GAS;
-  $('set-cloud').value  = CFG.CLOUD_NAME;
-  $('set-preset').value = CFG.UPLOAD_PRESET;
-  $('ejs-sid').value    = CFG.EJS_SID;
-  $('ejs-tid').value    = CFG.EJS_TID;
-  $('ejs-key').value    = CFG.EJS_KEY;
-  $('biz-email').value  = CFG.BIZ_EMAIL;
-  $('set-wa').value     = CFG.WA_NUMBER;
-  $('set-ph').value     = localStorage.getItem('kc_ph')||'';
+function loadSettings(){
+  $('set-gas').value=CFG.GAS;$('set-cloud').value=CFG.CLOUD_NAME;$('set-preset').value=CFG.UPLOAD_PRESET;
+  $('ejs-sid').value=CFG.EJS_SID;$('ejs-tid').value=CFG.EJS_TID;$('ejs-key').value=CFG.EJS_KEY;
+  $('biz-email').value=CFG.BIZ_EMAIL;$('set-wa').value=CFG.WA_NUMBER;$('set-ph').value=localStorage.getItem('kc_ph')||'';
 }
-
-async function saveGAS() {
-  const url=$('set-gas').value.trim();
-  if (!url) return toast('Enter your Apps Script URL');
-  localStorage.setItem('kc_gas',url);
-  const res=$('gas-test-res');
-  res.textContent='⏳ Testing connection…'; res.style.color='var(--muted)';
-  try {
-    const r=await fetch(`${url}?sheet=ReadyStock&_=${Date.now()}`);
-    const j=await r.json();
-    if (j.ok) {
-      res.innerHTML=`✅ <strong>Connected successfully!</strong> Found ${j.data.length} products in ReadyStock sheet. Customers worldwide will now see your products!`;
-      res.style.color='#2E7D32';
-      checkGAS();
-      // Sync local cache to sheets if any local products exist
+async function saveGAS(){
+  const url=$('set-gas').value.trim();if(!url)return toast('Enter your Apps Script URL');
+  localStorage.setItem('kc_gas',url);const res=$('gas-test-res');res.textContent='Testing...';res.style.color='var(--muted)';
+  try{
+    const r=await fetch(url+'?sheet=ReadyStock&_='+Date.now());const j=await r.json();
+    if(j.ok){res.innerHTML='Connected! Found '+j.data.length+' products.';res.style.color='#2E7D32';checkGAS();
       const local=gd('ready');
-      if (local.length>0) {
-        res.innerHTML+=`<br><br>⚡ Found ${local.length} locally saved products. Syncing to Google Sheets…`;
-        for (const item of local) { await gsPost('save','ReadyStock',item); }
-        res.innerHTML+=` Done! All products are now in Google Sheets.`;
-      }
-    } else throw new Error(j.error);
-  } catch(e) {
-    res.innerHTML=`❌ Failed: ${e.message}<br>Make sure you deployed with "Anyone" access and copied the correct URL.`;
-    res.style.color='#C62828';
-  }
+      if(local.length>0){res.innerHTML+=' Syncing '+local.length+' local products...';for(const item of local){await gsPost('save','ReadyStock',item);}res.innerHTML+=' Done!';}
+    }else throw new Error(j.error);
+  }catch(e){res.innerHTML='Failed: '+e.message;res.style.color='#C62828';}
 }
-
-function saveCloudinary() {
-  const cn=$('set-cloud').value.trim(), up=$('set-preset').value.trim();
-  if (!cn||!up) return toast('Enter both Cloud Name and Upload Preset');
-  localStorage.setItem('kc_cloud',cn); localStorage.setItem('kc_preset',up);
-  toast('Cloudinary settings saved ✓');
+function saveCloudinary(){
+  const cn=$('set-cloud').value.trim(),up=$('set-preset').value.trim();
+  if(!cn||!up)return toast('Enter both Cloud Name and Upload Preset');
+  localStorage.setItem('kc_cloud',cn);localStorage.setItem('kc_preset',up);toast('Cloudinary settings saved');
 }
-
-async function testCloudinary() {
-  const cloud=$('set-cloud').value.trim()||CFG.CLOUD_NAME;
-  const preset=$('set-preset').value.trim()||CFG.UPLOAD_PRESET;
-  const res=$('cloud-test-result'); res.textContent='⏳ Testing…';
-  const cv=document.createElement('canvas'); cv.width=cv.height=1;
-  cv.getContext('2d').fillRect(0,0,1,1);
+async function testCloudinary(){
+  const cloud=$('set-cloud').value.trim()||CFG.CLOUD_NAME,preset=$('set-preset').value.trim()||CFG.UPLOAD_PRESET;
+  const res=$('cloud-test-result');res.textContent='Testing...';
+  const cv=document.createElement('canvas');cv.width=cv.height=1;cv.getContext('2d').fillRect(0,0,1,1);
   cv.toBlob(async blob=>{
-    const fd=new FormData(); fd.append('file',blob,'test.jpg'); fd.append('upload_preset',preset);
-    try {
-      const r=await fetch(`https://api.cloudinary.com/v1_1/${cloud}/image/upload`,{method:'POST',body:fd});
+    const fd=new FormData();fd.append('file',blob,'test.jpg');fd.append('upload_preset',preset);
+    try{const r=await fetch('https://api.cloudinary.com/v1_1/'+cloud+'/image/upload',{method:'POST',body:fd});
       const j=await r.json();
-      if (j.secure_url) { res.innerHTML=`✅ <strong>Connected!</strong> Cloud: <code>${cloud}</code> · Preset: <code>${preset}</code>`; res.style.color='#2E7D32'; }
-      else { res.innerHTML=`❌ ${j.error?.message||'Failed'}`; res.style.color='#C62828'; }
-    } catch { res.innerHTML='❌ Network error'; res.style.color='#C62828'; }
+      if(j.secure_url){res.innerHTML='Connected! Cloud: '+cloud+' Preset: '+preset;res.style.color='#2E7D32';}
+      else{res.innerHTML='Failed: '+(j.error&&j.error.message||'Unknown');res.style.color='#C62828';}
+    }catch{res.innerHTML='Network error';res.style.color='#C62828';}
   },'image/jpeg');
 }
-
-function saveEmailSettings() {
-  localStorage.setItem('kc_ejs_sid',$('ejs-sid').value.trim());
-  localStorage.setItem('kc_ejs_tid',$('ejs-tid').value.trim());
-  localStorage.setItem('kc_ejs_key',$('ejs-key').value.trim());
-  localStorage.setItem('kc_biz_em', $('biz-email').value.trim());
-  initEmailJS(); toast('Email settings saved ✓');
+function saveEmailSettings(){
+  localStorage.setItem('kc_ejs_sid',$('ejs-sid').value.trim());localStorage.setItem('kc_ejs_tid',$('ejs-tid').value.trim());
+  localStorage.setItem('kc_ejs_key',$('ejs-key').value.trim());localStorage.setItem('kc_biz_em',$('biz-email').value.trim());
+  initEmailJS();toast('Email settings saved');
 }
-
-function saveContactSettings() {
-  localStorage.setItem('kc_wa',$('set-wa').value.trim());
-  localStorage.setItem('kc_ph',$('set-ph').value.trim());
-  updateLinks(); toast('Contact settings saved ✓');
+function saveContactSettings(){
+  localStorage.setItem('kc_wa',$('set-wa').value.trim());localStorage.setItem('kc_ph',$('set-ph').value.trim());
+  updateLinks();toast('Contact settings saved');
 }
-
-function clearCache() {
-  if (!confirm('Clear local cache? All data remains safe in Google Sheets.')) return;
-  localStorage.removeItem('ready'); localStorage.removeItem('enquiries');
-  toast('Cache cleared — data will reload from Google Sheets ✓');
-  refreshDash();
+function clearCache(){
+  if(!confirm('Clear local cache? Data remains safe in Google Sheets.'))return;
+  localStorage.removeItem('ready');localStorage.removeItem('enquiries');toast('Cache cleared');refreshDash();
 }
-
-/* ══ TOAST ════════════════════════════════════════════════════ */
-function toast(msg) {
-  const t=$('toast'); t.textContent=msg; t.classList.add('show');
-  setTimeout(()=>t.classList.remove('show'),2600);
-}
-
-/* ══ CLOCK ════════════════════════════════════════════════════ */
-setInterval(()=>{
-  const el=$('aclock');
-  if(el) el.textContent=new Date().toLocaleString('en-IN',{weekday:'short',day:'2-digit',month:'short',hour:'2-digit',minute:'2-digit'});
-},1000);
-
-/* ══ INIT ═════════════════════════════════════════════════════ */
-updateLinks();
-renderHome();
-if (sessionStorage.getItem('kc_auth')==='1') $('adm-login').style.display='none';
+function toast(msg){const t=$('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2600);}
+setInterval(()=>{const el=$('aclock');if(el)el.textContent=new Date().toLocaleString('en-IN',{weekday:'short',day:'2-digit',month:'short',hour:'2-digit',minute:'2-digit'});},1000);
+updateLinks();renderHome();
+if(sessionStorage.getItem('kc_auth')==='1')$('adm-login').style.display='none';
 $('prod-modal').addEventListener('click',e=>{if(e.target===$('prod-modal'))closeModal();});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeModal();closeMob();}});
 </script>
