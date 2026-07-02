@@ -1027,7 +1027,7 @@ function openModal(item){
   else{mm.innerHTML='<div class="iph"><div class="iph-i">&#128439;</div></div>';}
   const tag=$('m-tag');tag.textContent=item.tag||'';tag.style.display=item.tag?'inline-block':'none';
   $('m-name').textContent=item.name;$('m-cat').textContent=item.fabric||'-';
-  $('m-price').textContent=item.price?'&#8377;'+item.price+' per piece/set':'On Request';
+  $('m-price').textContent=item.price?'item.price+' per piece':'On Request';
   $('m-stock').textContent=item.stock?item.stock+' sets available':'';
   $('m-stock-row').style.display=item.stock?'flex':'none';
   $('m-wa').href='https://wa.me/'+CFG.WA_NUMBER+'?text='+encodeURIComponent('Hi Kreative Cotton! I\'m interested in '+item.name+'. Price: &#8377;'+(item.price||'?'));
