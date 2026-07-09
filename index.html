@@ -727,6 +727,11 @@ footer{background:var(--dark);color:rgba(250,247,242,.7);padding:48px 5% 22px;}
         <div class="apanel" id="ap-mgr-stk">
           <div class="acard">
             <div class="acard-t">All Ready Stock <button class="abtn ab-d ab-sm" onclick="switchP('add-stk',null)">+ Add New</button></div>
+            <!-- SEARCH -->
+            <div class="afg" style="max-width:340px">
+              <label>Search by Name</label>
+              <input type="text" id="mgr-search" placeholder="Type a product name..." oninput="setMgrSearch(this.value)">
+            </div>
             <!-- CATEGORY FILTER -->
             <div class="fbar" id="mgr-cat-bar">
               <button class="fbtn active" onclick="setMgrFilter('cat','all',event)">All Categories</button>
@@ -1088,9 +1093,10 @@ function switchP(id,el){
   (el||document.querySelector('.alnk[data-p="'+id+'"]'))&&(el||document.querySelector('.alnk[data-p="'+id+'"]')).classList.add('active');
   const pm=PM[id]||['Admin',''];$('atb-t').textContent=pm[0];$('atb-s').textContent=pm[1];
   if(id==='dashboard')refreshDash();
-  if(id==='mgr-stk'){MGR.catFilter='all';MGR.statusFilter='all';
+  if(id==='mgr-stk'){MGR.catFilter='all';MGR.statusFilter='all';MGR.searchTerm='';
     document.querySelectorAll('#mgr-cat-bar .fbtn').forEach((b,i)=>{b.classList.toggle('active',i===0);});
     document.querySelectorAll('#mgr-status-bar .fbtn').forEach((b,i)=>{b.classList.toggle('active',i===0);});
+    const sEl=$('mgr-search');if(sEl)sEl.value='';
     loadManageTable();}
   if(id==='settings')loadSettings();
   if(id==='add-stk')$('gas-warn').style.display=CFG.GAS?'none':'block';
@@ -1131,8 +1137,8 @@ async function saveProduct(){
   }else{ss.className='save-status show local';ss.innerHTML='Saved locally only. Connect Google Sheets in Settings.';toast('Saved locally');}
   _eid=null;resetForm();refreshDash();
 }
-/* ══ MANAGE TABLE with category + status filter ══ */
-const MGR={catFilter:'all',statusFilter:'all',allItems:[]};
+/* ══ MANAGE TABLE with category + status filter + search ══ */
+const MGR={catFilter:'all',statusFilter:'all',searchTerm:'',allItems:[]};
 async function loadManageTable(){
   const t=$('tbl-stk');
   t.innerHTML='<tr><td colspan="7" style="padding:14px"><div class="gs-spin" style="margin:0;width:24px;height:24px;border-width:2px"></div></td></tr>';
@@ -1141,22 +1147,24 @@ async function loadManageTable(){
 }
 function renderManageTable(){
   const t=$('tbl-stk');
-  let items=MGR.allItems;
+  let items=[...MGR.allItems];
   if(MGR.catFilter!=='all')items=items.filter(i=>i.fabric===MGR.catFilter);
   if(MGR.statusFilter==='active')items=items.filter(i=>itemIsActive(i));
   if(MGR.statusFilter==='inactive')items=items.filter(i=>!itemIsActive(i));
+  if(MGR.searchTerm)items=items.filter(i=>(i.name||'').toLowerCase().includes(MGR.searchTerm));
+  items.sort((a,b)=>(a.name||'').localeCompare(b.name||'',undefined,{sensitivity:'base'}));
   const mc=$('mgr-count');if(mc)mc.textContent='Showing '+items.length+' of '+MGR.allItems.length+' products';
   if(!items.length){t.innerHTML='<tr><td colspan="7" style="color:var(--muted);padding:14px">No products match this filter.</td></tr>';return;}
   t.innerHTML='<thead><tr><th></th><th>Name</th><th>Category</th><th>Price</th><th>Stock</th><th>Status</th><th>Actions</th></tr></thead><tbody>'+
-    items.map(i=>'<tr><td>'+(i.img?'<img src="'+i.img+'" class="athumb" oncontextmenu="return false;" draggable="false">':'<div class="ano-img">&#128439;</div>')+'</td>'
+    items.map(i=>'<tr data-id="'+i.id+'"><td>'+(i.img?'<img src="'+i.img+'" class="athumb" oncontextmenu="return false;" draggable="false">':'<div class="ano-img">&#128439;</div>')+'</td>'
       +'<td><strong>'+i.name+'</strong>'+(i.isHero===true||i.isHero==='TRUE'?'<br><span style="font-size:10px;color:var(--gold)">Hero bg</span>':'')+'</td>'
       +'<td>'+(i.fabric||'-')+'</td>'
       +'<td>'+(i.price?'&#8377;'+i.price:'-')+'</td>'
       +'<td>'+(i.stock||'-')+' sets</td>'
-      +'<td>'+(itemIsActive(i)?'<span class="badge-active">Active</span>':'<span class="badge-inactive">Inactive</span>')+'</td>'
+      +'<td class="status-cell">'+(itemIsActive(i)?'<span class="badge-active">Active</span>':'<span class="badge-inactive">Inactive</span>')+'</td>'
       +'<td><div class="tdacts">'
         +'<button class="abtn ab-o ab-sm" onclick="editItem(\''+i.id+'\')">Edit</button>'
-        +'<button class="abtn '+(itemIsActive(i)?'ab-toggle-on':'ab-toggle-off')+'" onclick="toggleActive(\''+i.id+'\')">'+(itemIsActive(i)?'Deactivate':'Activate')+'</button>'
+        +'<button class="abtn toggle-btn '+(itemIsActive(i)?'ab-toggle-on':'ab-toggle-off')+'" onclick="toggleActive(\''+i.id+'\')">'+(itemIsActive(i)?'Deactivate':'Activate')+'</button>'
         +'<button class="abtn ab-del" onclick="delItem(\''+i.id+'\')">Delete</button>'
       +'</div></td></tr>').join('')+'</tbody>';
 }
@@ -1167,14 +1175,41 @@ function setMgrFilter(type,val,e){
   if(type==='cat')MGR.catFilter=val;else MGR.statusFilter=val;
   renderManageTable();
 }
+function setMgrSearch(val){
+  MGR.searchTerm=(val||'').trim().toLowerCase();
+  renderManageTable();
+}
+function updateRowStatus(id,item){
+  const row=document.querySelector('#tbl-stk tr[data-id="'+id+'"]');
+  if(!row)return;
+  const statusCell=row.querySelector('.status-cell');
+  if(statusCell)statusCell.innerHTML=itemIsActive(item)?'<span class="badge-active">Active</span>':'<span class="badge-inactive">Inactive</span>';
+  const toggleBtn=row.querySelector('.toggle-btn');
+  if(toggleBtn){
+    toggleBtn.className='abtn toggle-btn '+(itemIsActive(item)?'ab-toggle-on':'ab-toggle-off');
+    toggleBtn.textContent=itemIsActive(item)?'Deactivate':'Activate';
+  }
+  const mc=$('mgr-count');
+  if(mc){
+    let items=[...MGR.allItems];
+    if(MGR.catFilter!=='all')items=items.filter(i=>i.fabric===MGR.catFilter);
+    if(MGR.statusFilter==='active')items=items.filter(i=>itemIsActive(i));
+    if(MGR.statusFilter==='inactive')items=items.filter(i=>!itemIsActive(i));
+    if(MGR.searchTerm)items=items.filter(i=>(i.name||'').toLowerCase().includes(MGR.searchTerm));
+    mc.textContent='Showing '+items.length+' of '+MGR.allItems.length+' products';
+  }
+}
 async function toggleActive(id){
   const items=gd('ready');const idx=items.findIndex(i=>i.id===id);if(idx===-1)return;
   const item={...items[idx],isActive:!itemIsActive(items[idx])};
   items[idx]=item;sd('ready',items);
   MGR.allItems=MGR.allItems.map(i=>i.id===id?item:i);
   PS.allItems=PS.allItems.map(i=>i.id===id?item:i);
-  renderManageTable();
-  toast(itemIsActive(item)?'Product activated - now visible to customers':'Product deactivated - hidden from customers');
+  /* Update this row in place instead of re-filtering the whole table, so the item
+     never disappears from the Manage Stock grid just because it was toggled while
+     a status filter (e.g. "Active") was selected. It can always be toggled back. */
+  updateRowStatus(id,item);
+  toast(itemIsActive(item)?'Product activated - now visible to customers':'Product deactivated - hidden from customers (still shown here so you can reactivate anytime)');
   await gsPost('save','ReadyStock',item);
 }
 function editItem(id){
