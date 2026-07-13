@@ -364,6 +364,11 @@ footer{background:var(--dark);color:rgba(250,247,242,.7);padding:48px 5% 22px;}
     <div class="ci"><div class="cd"></div>Chord Set</div>
     <div class="ci"><div class="cd"></div>Half Chord Set</div>
     <div class="ci"><div class="cd"></div>Frock</div>
+    <div class="ci"><div class="cd"></div>Independance Dresses</div>
+    <div class="ci"><div class="cd"></div>Krishna Dresses</div>
+    <div class="ci"><div class="cd"></div>Combo (Girls & Boys)</div>
+     <div class="ci"><div class="cd"></div>Boy's Kurta</div>
+
   </div>
   <section>
     <div class="stag">Just Landed</div>
@@ -431,6 +436,13 @@ footer{background:var(--dark);color:rgba(250,247,242,.7);padding:48px 5% 22px;}
       <button class="fbtn" onclick="filterStock('Chord Set (30*36)',event)">Chord Sets (30-36)</button>
       <button class="fbtn" onclick="filterStock('Half Chord Set (16*26)',event)">Half Chord Sets (16-26)</button>
       <button class="fbtn" onclick="filterStock('Frock (12*20)',event)">Frock (12*20)</button>
+      <button class="fbtn" onclick="filterStock('Independence Dress',event)">Independence Dress</button>
+      <button class="fbtn" onclick="filterStock('Combo(Boys & Girls)',event)">Combo(Boys & Girls)</button>
+      <button class="fbtn" onclick="filterStock('Krishna Dresses',event)">Krishna Dresses</button>
+      <button class="fbtn" onclick="filterStock('Boy\'s Kurta',event)">Boy's Kurta</button>
+
+      
+
     </div>
     <div class="pgrid" id="stk-grid"><div class="gs-loading"><div class="gs-spin"></div><div class="gs-status">Loading from Google Sheets…</div></div></div>
     <div class="pagination" id="stk-pag"></div>
@@ -468,7 +480,7 @@ footer{background:var(--dark);color:rgba(250,247,242,.7);padding:48px 5% 22px;}
     <h2 class="stitle">Let's Talk</h2>
     <div class="egrid">
       <div>
-        <div class="ci-item"><div class="ci-lbl">Phone / WhatsApp</div><div class="ci-val"><a id="ci-phone" href="tel:+919821377274">+91 9821377274</a></div></div>
+        <div class="ci-item"><div class="ci-lbl">Phone / WhatsApp</div><div class="ci-val"><a id="ci-phone" href="tel:+919821423324">+91 9821423324</a></div></div>
         <div class="ci-item"><div class="ci-lbl">Email</div><div class="ci-val"><a id="ci-email" href="mailto:krazygirlmumbai@gmail.com">krazygirlmumbai@gmail.com</a></div></div>
         <div class="ci-item"><div class="ci-lbl">Address</div><div class="ci-val">29 Grd Flr, ESSGEE OPTION,<br>Mumbai - 400028, Maharashtra</div></div>
         <div class="ci-item"><div class="ci-lbl">Business Hours</div><div class="ci-val">Mon - Sat: 10:00 AM - 9:00 PM</div></div>
@@ -490,7 +502,14 @@ footer{background:var(--dark);color:rgba(250,247,242,.7);padding:48px 5% 22px;}
             <option>Salwar Set (10*16)</option><option>Salwar Set (18*32)</option><option>Salwar Set (34*38)</option>
             <option>Lehnga Choli (10*16)</option><option>Lehnga Choli (18*28)</option>
             <option>Chord Set (18*28)</option><option>Chord Set (30*36)</option>
-            <option>Half Chord Set (16*26)</option><option>Frock (12*20)</option><option>Other</option>
+            <option>Half Chord Set (16*26)</option><option>Frock (12*20)</option>
+<option>Independence Dress</option>
+<option>Combo(Boys & Girls)</option>
+<option>Krishna Dresses</option>
+<option>Boy's Kurta</option>
+
+
+<option>Other</option>
           </select>
         </div>
         <div class="fg"><label>Quantity (Sets)</label><input type="number" id="eq-qty" placeholder="e.g. 2 Sets"></div>
@@ -524,7 +543,7 @@ footer{background:var(--dark);color:rgba(250,247,242,.7);padding:48px 5% 22px;}
       <li><a>Lehnga Choli</a></li><li><a>Frock</a></li>
     </ul></div>
     <div class="fcol"><h4>Contact</h4><ul>
-      <li><a href="tel:+919821377274">+91 9821377274</a></li>
+      <li><a href="tel:+919821423324">+91 9821423324</a></li>
       <li><a href="mailto:krazygirlmumbai@gmail.com">krazygirlmumbai@gmail.com</a></li>
       <li><a onclick="showPage('enquiry')">Send Enquiry</a></li>
     </ul></div>
@@ -641,6 +660,11 @@ footer{background:var(--dark);color:rgba(250,247,242,.7);padding:48px 5% 22px;}
                   <option>Lehnga Choli(10*16)</option><option>Lehnga Choli(18*28)</option>
                   <option>Chord Set (18*28)</option><option>Chord Set (30*36)</option>
                   <option>Half Chord Set (16*26)</option><option>Frock (12*20)</option>
+<option>Independence Dress</option>
+<option>Combo</option>
+<option>Krishna Dresses</option>
+<option>Boy's Kurta</option>
+
                 </select>
               </div>
               <div class="afg"><label>Price (&#8377;)</label><input type="number" id="s-price" placeholder="e.g. 995"></div>
@@ -744,6 +768,14 @@ footer{background:var(--dark);color:rgba(250,247,242,.7);padding:48px 5% 22px;}
               <button class="fbtn" onclick="setMgrFilter('cat','Chord Set (30*36)',event)">Chord (30*36)</button>
               <button class="fbtn" onclick="setMgrFilter('cat','Half Chord Set (16*26)',event)">Half Chord</button>
               <button class="fbtn" onclick="setMgrFilter('cat','Frock (12*20)',event)">Frock</button>
+ <button class="fbtn" onclick="setMgrFilter('cat','Independence Dress',event)">Independence Dress</button>
+ <button class="fbtn" onclick="setMgrFilter('cat','Combo(Boy\'s & Girls)',event)">Combo(Boy's & Girls)</button>
+ <button class="fbtn" onclick="setMgrFilter('cat','Krishna Dresses',event)">Krishna Dresses</button>
+
+ <button class="fbtn" onclick="setMgrFilter('cat','Boys Kurta',event)">Boy's Kurta</button>
+
+
+
             </div>
             <!-- STATUS FILTER -->
             <div class="fbar" id="mgr-status-bar">
@@ -831,6 +863,7 @@ footer{background:var(--dark);color:rgba(250,247,242,.7);padding:48px 5% 22px;}
 'use strict';
 const CFG = {
   get GAS(){return localStorage.getItem('kc_gas')||'https://script.google.com/macros/s/AKfycbx3RhUIHBW6juXZboNAAGLxb1EMi-9dKAQ4JxdWP7B-BvWtc9CJPuLl735GHvZKZdMg/exec';},
+
   get CLOUD_NAME(){return localStorage.getItem('kc_cloud')||'dbri9nty7';},
   get UPLOAD_PRESET(){return localStorage.getItem('kc_preset')||'Kreativecotton';},
   get WA_NUMBER(){return localStorage.getItem('kc_wa')||'919821377274';},
